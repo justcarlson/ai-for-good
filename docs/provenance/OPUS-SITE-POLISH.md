@@ -43,3 +43,20 @@ and provider receipts sit beside this file. Codex integrated and verified the
 edits; it did not substitute a different model for the creative pass. The owner
 removed the per-task spending cap for this pass; the existing $5 UTC-month limit
 remains.
+
+
+## Third release: dedicated landing page
+
+After the owner requested more attention to the home page, Opus rebuilt it with
+three clear starting choices, all six interactive demos, all seven guided
+exercises, real activity timings and a smaller garden illustration. The new
+stylesheet is scoped to the landing page. Opening slides and offline download
+contracts are preserved. The first response returned complete HTML but truncated
+CSS; an Opus continuation completed the stylesheet. Main corrected the exercise
+links to open their actual guides rather than nonexistent menu anchors.
+
+Opus reviewed the rendered desktop and phone pages and returned `ready`. Four
+viewport sizes passed without overflow; desktop and phone axe checks found no
+violations or incomplete checks. All four slides worked by keyboard. The extracted
+offline landing showed six demo cards and seven guide links with the stylesheet
+loaded. Exact model and generation receipts are retained beside this file.
