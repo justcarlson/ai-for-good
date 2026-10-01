@@ -78,3 +78,9 @@ The companion, home, menu and route pages had no axe violations. A named preview
 region was added after an incomplete ARIA check. Textareas grow to fit their
 contents. No screen reader or physical phone was used. Visual reviews are
 separate from the main session's interaction tests.
+
+Published on `good.justcarlson.com`: all 24 changed files match the tested build
+by SHA-256, including the offline ZIP. A phone-size production check confirmed
+the updated preset guards, field sizing under the live CSP, nine recipes and
+reset, with no browser errors. The final companion axe check has no violations
+or incomplete checks. Both new commits passed the secret scan.
