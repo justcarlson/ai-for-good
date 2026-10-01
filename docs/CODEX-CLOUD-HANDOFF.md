@@ -5,6 +5,35 @@ The website and demos are implemented; Cloudflare Pages serves the static files.
 
 ## Cloud status
 
+The expanded workshop is live at [good.justcarlson.com](https://good.justcarlson.com).
+Its 13 activities passed the local checks recorded in [VERIFICATION.md](VERIFICATION.md).
+The source commit is `a9985485e1de0df819863ab9e7fdeb7a8aed7c70`.
+
+The [expansion handoff](https://chatgpt.com/codex/tasks/task_e_6abe4f5a91ac832aa53644bb01d08531)
+received a compressed source snapshot, but its worker could not transfer the
+large inline payload to a file. The fallback GitHub fetch also returned 403.
+No expansion build or review ran in that task.
+
+A [focused follow-up](https://chatgpt.com/codex/tasks/task_e_6abe50bf3a1c832a8e9c15789d7961ab)
+reviewed eight expansion scripts as plain text. It covered the
+menu, guides, routes, claim board, planner, data filters and audio. It does not
+replace the local build or browser checks.
+
+It found two defects, both corrected after review:
+
+- Switching presenter mode reset the activity countdown. The toggle now preserves
+  running and paused timers; selecting the active activity mode also preserves it.
+- A rejected earlier audio start could stop a newer playback attempt. The failure
+  path now checks the run ID before changing playback state.
+
+The main session verified timer progress across both toggles and injected a late
+audio rejection while a newer playback ran. Both passed. Cloud performed source
+review only; it did not run an expansion build or browser. The dedicated Cloud
+environment remains unavailable, so this handoff used an isolated review in the
+existing website runtime without changing that repository.
+
+## Original two-demo review
+
 The first [cloud task](https://chatgpt.com/codex/tasks/task_e_6abe44a79c8c832ab6f6c092e49bf758)
 ran with ChatGPT subscription authentication. The only available website runtime
 was mapped to `justcarlson.com`, so it was instructed to leave that checkout alone
@@ -53,5 +82,6 @@ in the surrounding code. The main session owns integration and publication.
 The native Codex text worker reported `gpt-6-astra`. Motion code came from
 `anthropic/claude-opus-5.5`; visual review came from
 `anthropic/claude-sonnet-5.5`. Prompts, original contributions, and provider receipts
-are in `docs/` and `docs/provenance/`. Paid calls have a $0.50 total task cap and
-$5 UTC-month cap. No further paid calls are needed for this handoff.
+are in `docs/` and `docs/provenance/`. The owner raised the paid task cap to $2 for
+the expansion; the $5 UTC-month cap stayed in place. No further paid calls are
+needed for this handoff.

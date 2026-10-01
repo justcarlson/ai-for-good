@@ -134,7 +134,7 @@
       "depends_on": [
         "review"
       ],
-      "acceptance": "HTTPS site opens without login; both demos and links work."
+      "acceptance": "HTTPS site opens without login; all six demos, 13 guides and links work."
     },
     {
       "id": "backup",
@@ -178,7 +178,7 @@
     },
     {
       "id": "activity-library",
-      "title": "Add six flexible facilitated activities",
+      "title": "Add seven flexible facilitated activities",
       "owner": "main",
       "depends_on": [
         "publish"
