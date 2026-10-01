@@ -11,8 +11,16 @@ prompts, and notes that explain how each demo was made.
 - **Make it clearer:** turn a fictional community notice into clear next steps.
 - **From sketch to screen:** compare a short video prompt with its generated clip.
 
-The first delivery is a review plan. Demo implementation and publication status
-will be recorded here as they are verified.
+The first delivery is a review plan. The public site is not deployed yet.
+
+## Ideas and handoff
+
+- [Opus 5.5 motion concepts](docs/ideas-opus.md)
+- [Codex text concepts and opening slides](docs/ideas-codex.md)
+- [Codex Cloud integration brief](docs/CODEX-CLOUD-HANDOFF.md)
+
+The ideas were produced in separate Git worktrees and integrated into `main`.
+Demo implementation and publication status will be recorded here as verified.
 
 ## Working rules
 
