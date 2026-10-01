@@ -3,10 +3,10 @@ if (deck) {
   const slides = [
   {
     "kicker": "01 / Next week",
-    "title": "What will one person on your team use next week?",
-    "description": "Name the person, the moment they would use it, and what done looks like in 15 seconds.",
-    "label": "Open the companion ↗",
-    "href": "nonprofit.html"
+    "title": "Who needs this piece of writing?",
+    "description": "Pick one reader: a student, a funder or a supporter. Name what they should know or do next.",
+    "label": "Try the writing practice →",
+    "href": "writing.html"
   },
   {
     "kicker": "02 / R-T-C-F",

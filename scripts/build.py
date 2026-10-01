@@ -8,6 +8,8 @@ ROOT = Path(__file__).resolve().parent.parent
 public = ROOT / 'public'
 from build_companion import build as build_companion
 build_companion(ROOT)
+from build_writing import build as build_writing
+build_writing(ROOT)
 scene = (ROOT / 'src/seed-scene.js').read_text()
 assert scene.startswith('export function drawScene('), 'Unexpected renderer format'
 (public / 'assets/seed-scene.js').write_text(

@@ -94,3 +94,9 @@ The native Codex text worker reported `gpt-6-astra`. Motion code came from
 are in `docs/` and `docs/provenance/`. The owner raised the paid task cap to $2 for
 the expansion; the $5 UTC-month cap stayed in place. No further paid calls are
 needed for this handoff.
+
+
+Education-grant writing was added after the Cloud snapshot above. It received
+local browser/offline UAT and actual Opus 5.5 screenshot reviews. The earlier
+Cloud review does not cover these later files. See `WRITING-WORKSHOP.md` and the
+education-grant section in `VERIFICATION.md`.

@@ -27,7 +27,9 @@
     "site_polish_task_cap_usd": null,
     "site_polish_authorization": "2026-10-01: Owner removed the task cap for the Opus whole-site copy/design pass. $5 UTC-month limit remains.",
     "nonprofit_reference": "https://rtcf-workshop.emergent.host/",
-    "nonprofit_scope": "Owner confirmed companion demos and prompts that follow the nonprofit agenda."
+    "nonprofit_scope": "Owner confirmed companion demos and prompts that follow the nonprofit agenda.",
+    "writing_focus": "Teach a repeatable method with fictional education-grant examples: audience, observed voice patterns, supported claims, learner edits and reusable instructions tested on a second brief. No real organization samples required.",
+    "writing_pass_cap_usd": 0.5
   },
   "coordination": {
     "task_owner": "main Codex session",
@@ -225,6 +227,15 @@
         "presenter-flow"
       ],
       "acceptance": "Official AI Lab remains the main workshop; companion leads with nonprofit tasks, R-T-C-F prompts, fictional practice data, participant control, human review and clear handoff links."
+    },
+    {
+      "id": "nonprofit-writing",
+      "title": "Tailor reusable writing skills to education-grant work",
+      "owner": "Opus 5.5 direction and review; main implementation and UAT",
+      "depends_on": [
+        "nonprofit-alignment"
+      ],
+      "acceptance": "Four audience-specific examples, traceable voice patterns, editable reusable instructions, copy/download/reset, desktop/mobile/offline checks and exact model receipts."
     }
   ]
 }

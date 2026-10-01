@@ -84,3 +84,35 @@ by SHA-256, including the offline ZIP. A phone-size production check confirmed
 the updated preset guards, field sizing under the live CSP, nine recipes and
 reset, with no browser errors. The final companion axe check has no violations
 or incomplete checks. Both new commits passed the secret scan.
+
+
+## Education-grant writing practice
+
+The learner-first writing exercise uses four fictional cases: a funding request,
+a donor email, applicant help and a newsletter. Opus 5.5 supplied the first
+concept, copy, teaching correction and screenshot review. Review findings about
+numeric qualifiers, sample evidence and mobile navigation were applied.
+
+- `npm run build` and `npm run check` passed: 18 browser scripts, local links,
+  offline links and ZIP integrity.
+- 45 browser checks passed: learner answers start empty; prepared answers start
+  collapsed; four source/draft/revision sets match the reviewed content; case
+  attempts survive switching in page memory; shared voice rules persist; reset
+  affects the current case; optional hints fill only blanks and carry labels;
+  labels disappear on editing; markup stays literal.
+- Copy passed through the native clipboard write function with the full current
+  instructions. Browser clipboard read-back was not available. Denial selected
+  all instruction text; Chromium omits the final newline from the selection.
+- The download action supplied a Markdown Blob exactly matching the preview and
+  requested the filename `SKILL.md`. This does not assert an operating-system
+  file dialog result.
+- Keyboard, reduced-motion, 1440/768/390/375 layouts and extracted `file://`
+  offline selection/edit/reset passed. Nine added checks cover 320/390 navigation
+  bounds, 44px link targets, and CSS-doubled navigation text at 320px. This is not
+  a claim about browser zoom or a physical device.
+- Axe reported zero violations and zero incomplete checks on the writing page,
+  homepage and R-T-C-F companion. The browser recorded no page errors.
+
+Private evidence: `.local/writing-checks.json`, `writing-axe-final.json` and
+`writing-review-fix-checks.json`. Prepared examples exercise editorial judgment;
+no learner draft is scored and no live model runs in this application.

@@ -1,13 +1,18 @@
 # AI for Good
 
-[Nonprofit companion](https://good.justcarlson.com/nonprofit.html) · [AI Lab session](https://rtcf-workshop.emergent.host/) · [Optional practice](https://good.justcarlson.com/workshop.html?host=1) · [Offline ZIP](https://good.justcarlson.com/downloads/ai-for-good.zip)
+[Writing practice](https://good.justcarlson.com/writing.html) · [R-T-C-F companion](https://good.justcarlson.com/nonprofit.html) · [AI Lab session](https://rtcf-workshop.emergent.host/) · [Optional practice](https://good.justcarlson.com/workshop.html?host=1) · [Offline ZIP](https://good.justcarlson.com/downloads/ai-for-good.zip)
 
-An optional companion to the nonprofit AI Lab agenda. Start with the R-T-C-F
-builder: three fictional prompts for audience rewrites, month-end requests and
-funder updates. Edit the four fields, review the assembled prompt, and copy it
-to your organization's own workspace. This page makes no AI calls and does not
-send or save entered text. Links return to the official session's nine recipes,
-Prompt School, mentor guidance and Stack page.
+An optional companion to the nonprofit AI Lab agenda. The main path now teaches
+writing skills for education-grant work: funding requests, donor emails,
+applicant help articles and newsletters. Write a reader brief, extract voice
+patterns, and edit a flawed draft before opening the prepared comparison.
+Export your own reusable instructions and test them on another case. All example policies,
+numbers and voice samples are fictional. No live AI runs in the browser.
+
+The R-T-C-F companion also has three practice prompts and links to the official
+session's nine recipes, Prompt School, mentor guidance and Stack page.
+The site does not send entered text to a service or save it automatically.
+Copy or download anything you want to keep.
 
 Thirteen optional practice activities remain: six interactive demos and seven
 guided exercises. Each guide has Show it, Try it and On paper modes, a prompt,
@@ -54,7 +59,9 @@ may start it. Cloud workers use source checks or the public site; no extra serve
 
 The build packages the Opus renderers, turns `content/workshop-library.json` into
 a local browser script, renders `content/nonprofit-companion.json` into a static
-page and preset script, validates route totals, and creates the offline ZIP.
+page and preset script, renders `content/nonprofit-writing.json` into the writing
+exercise and a standalone skill template, validates route totals, and creates
+the offline ZIP.
 Checks cover every JavaScript file, local page links, offline links and ZIP
 integrity. Cloudflare Pages serves `public/`; `vercel.json` keeps it portable.
 
@@ -72,6 +79,7 @@ The nonprofit alignment also used Opus for content, first layout and visual
 review, followed by Codex integration and browser checks.
 
 - [Opus copy/design pass and verification](docs/provenance/OPUS-SITE-POLISH.md)
+- [Education-grant writing workshop](docs/WRITING-WORKSHOP.md)
 - [Nonprofit reference and content alignment](docs/NONPROFIT-ALIGNMENT.md)
 - [Anthropic direction, review and corrections](docs/provenance/EXPANSION.md)
 - [Browser and offline verification](docs/VERIFICATION.md)
