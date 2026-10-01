@@ -20,3 +20,12 @@ support where relevant, and a usable prepared example. Label prepared model
 outputs clearly. Do not simulate a live model response without disclosure.
 
 Document build, preview, and verification commands when implementation begins.
+
+## Shared preview server
+
+The main session owns one preview server at `http://127.0.0.1:4173`, serving
+`public/` from this repository. Every local delegate must reuse it. Do not start
+another development, preview, HTTP, or build server, and do not stop this server.
+Send changes to the main session for integration before checking the shared page.
+Cloud delegates must use the supplied public preview URL or perform source/build
+checks only. They must not start a duplicate server in their cloud environment.

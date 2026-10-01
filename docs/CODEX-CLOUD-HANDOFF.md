@@ -1,61 +1,39 @@
 # Codex Cloud handoff
 
-Status: prepared for the owner's plan review. No cloud task has been submitted.
+The public repository is [justcarlson/ai-for-good](https://github.com/justcarlson/ai-for-good).
+The website and demos are implemented; Cloudflare Pages serves the static files.
 
-## Repository and contributions
+## Cloud status
 
-Repository: <https://github.com/justcarlson/ai-for-good>.
+The first [cloud task](https://chatgpt.com/codex/tasks/task_e_6abe44a79c8c832ab6f6c092e49bf758)
+ran with ChatGPT subscription authentication. The only available website runtime
+was mapped to `justcarlson.com`, so it was instructed to leave that checkout alone
+and clone this public repository into `/tmp/ai-for-good-review`.
 
-- `ideas/codex`: text concepts and presentation opening in `docs/ideas-codex.md`.
-- `ideas/opus`: motion concepts in `docs/ideas-opus.md`, request in `IDEATION.md`,
-  and OpenRouter receipt in `docs/ideas-opus.receipt.json`.
-- `main`: integrates both contributions for review.
+That fetch failed with `CONNECT tunnel failed, response 403`. The task confirmed
+that the base website checkout stayed unchanged. No workshop review ran there.
 
-The text worker ran through Codex CLI with ChatGPT subscription login. Its runtime
-reported model `gpt-6-astra`. The motion worker used
-`anthropic/claude-opus-5.5`. The host recorded these identities; the original
-worker documents remain unchanged.
+The follow-up handoff supplies the public source snapshot in the task prompt so
+source and build checks can run without fetching GitHub. Its task URL and result
+will be recorded when complete. This does not create a repository-mapped Cloud
+environment for ongoing work.
 
-## Integration brief
+## Review contract
 
-Build a lightweight workshop home page and two demos. Prefer static HTML, CSS,
-and JavaScript, with no runtime API dependency. Use the Field Notebook visual
-direction in the Opus concept document. Keep the opening short and provide direct
-demo links. No employer branding.
+Use the exact provided source snapshot in an isolated directory. Do not edit the
+base website checkout, publish, push, read credentials, call paid models, or start
+other agents. Do not start a web server. One shared preview belongs to the main
+session; Cloud workers may use the public site when their network permits it.
 
-1. Integrate the Opus-authored Seed Courier animation. The motion code must come
-   from Claude Opus 5.5. Do not replace it with OpenAI-generated motion code.
-2. Build Make it clearer using the fictional notice, prepared output, source
-   mappings, and acceptance criteria in the Codex concept document.
-3. Include prompt and model details in a compact How it was made view.
-4. Provide reset, replay, keyboard controls, readable contrast, reduced motion,
-   and an offline copy. Clearly identify prepared outputs and local interactions.
-5. Add a FAL clip only if an approved credential path and a pre-call price check
-   fit the task budget. Otherwise omit generated video and label any recorded
-   animation as code animation.
-6. Request Opus 5.5 or Sonnet 5.5 design review of the built result, apply needed
-   fixes, then verify in a fresh browser at desktop and mobile sizes.
+Check build, JavaScript syntax, offline packaging, local links, keyboard controls,
+reduced motion, and prepared-output labels. Report concrete issues with file and
+line references. Keep the Opus-authored renderer unchanged; control fixes belong
+in the surrounding code. The main session owns integration and publication.
 
-The total paid model budget is $0.50 for the entire workshop task, not per worker.
-The monthly cap is $5 in UTC. Query the main session's current spend ledger before
-any further paid call. OpenAI work uses ChatGPT subscription authentication.
+## Provenance
 
-## Cloud setup
-
-Connect this public repository to a Codex Cloud environment using the owner's
-subscription. Confirm its repository mapping before submitting an integration
-task. Do not reuse an unrelated environment or call local execution a cloud run.
-The CLI currently requires an environment ID for `codex cloud exec`.
-
-Push reviewed worker commits before submitting the task. Record the cloud task
-URL and resulting commit here when available. No environment ID is verified yet.
-
-## Publication checks
-
-The proposed address is `good.justcarlson.com`; it is not live yet. Use the owner's
-existing Vercel account and the correct Cloudflare zone. Keep a working public
-deployment URL if custom DNS is delayed. Do not modify the existing main website.
-
-Verify the public site needs no login. Run the demos, check console errors and
-links, and test the local copy offline. Save the Anthropic review with its exact
-model and scope. The private Tailplan is kept outside this public repository.
+The native Codex text worker reported `gpt-6-astra`. Motion code came from
+`anthropic/claude-opus-5.5`; visual review came from
+`anthropic/claude-sonnet-5.5`. Prompts, original contributions, and provider receipts
+are in `docs/` and `docs/provenance/`. Paid calls have a $0.50 total task cap and
+$5 UTC-month cap. No further paid calls are needed for this handoff.

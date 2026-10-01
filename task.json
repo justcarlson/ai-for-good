@@ -2,25 +2,168 @@
   "schema_version": 1,
   "id": "ai-for-good-workshop-2026-10-01",
   "objective": "Publish a polished workshop home page and runnable AI for Good demos, with a mobile overview and a public source repository.",
-  "deadline": {"ready_for_rehearsal_utc": "2026-10-01T12:30:00Z", "presentation_utc": "2026-10-01T13:00:00Z", "timezone_assumption": "9 a.m. America/New_York"},
+  "deadline": {
+    "ready_for_rehearsal_utc": "2026-10-01T12:30:00Z",
+    "presentation_utc": "2026-10-01T13:00:00Z",
+    "timezone_assumption": "9 a.m. America/New_York"
+  },
   "repository": "https://github.com/justcarlson/ai-for-good",
   "target_url": "https://good.justcarlson.com",
-  "constraints": {"max_independent_workers": 2, "openai_auth": "ChatGPT subscription", "paid_task_cap_usd": 0.5, "paid_utc_month_cap_usd": 5, "motion_model": "anthropic/claude-opus-5.5", "design_review_models": ["anthropic/claude-opus-5.5", "anthropic/claude-sonnet-5.5"], "employer_branding": false, "fictional_data_only": true},
-  "coordination": {"task_owner": "main Codex session", "state_writer": "main Codex session only", "delegate_reports": "Each worker reports from its isolated worktree; main integrates and updates state.json.", "runtime_state": "state.json", "private_artifacts": ".local/"},
+  "constraints": {
+    "max_independent_workers": 2,
+    "openai_auth": "ChatGPT subscription",
+    "paid_task_cap_usd": 0.5,
+    "paid_utc_month_cap_usd": 5,
+    "motion_model": "anthropic/claude-opus-5.5",
+    "design_review_models": [
+      "anthropic/claude-opus-5.5",
+      "anthropic/claude-sonnet-5.5"
+    ],
+    "employer_branding": false,
+    "fictional_data_only": true,
+    "max_preview_servers": 1
+  },
+  "coordination": {
+    "task_owner": "main Codex session",
+    "state_writer": "main Codex session only",
+    "delegate_reports": "Each worker reports from its isolated worktree; main integrates and updates state.json.",
+    "runtime_state": "state.json",
+    "private_artifacts": ".local/",
+    "preview_server": {
+      "owner": "main Codex session",
+      "url": "http://127.0.0.1:4173",
+      "directory": "public",
+      "rule": "All local delegates reuse this server. Cloud delegates use the public preview or source/build checks; no duplicate servers."
+    }
+  },
   "tasks": [
-    {"id":"repository","title":"Create and verify the public GitHub repository","owner":"main","depends_on":[],"acceptance":"Public visibility and source commits verified."},
-    {"id":"research","title":"Find recent demo inspiration with Last30Days","owner":"main","depends_on":[],"acceptance":"Real links, dates, model names, and research limitations recorded."},
-    {"id":"ideation","title":"Collect ideas from Opus and Codex in separate worktrees","owner":"two delegated workers","depends_on":["repository"],"acceptance":"Both contributions and exact model provenance integrated."},
-    {"id":"mobile-plan","title":"Publish a short mobile Tailplan overview","owner":"Codex delegate","depends_on":["ideation"],"acceptance":"Same URL updated; phone layout, keyboard link, and copy verified."},
-    {"id":"cloudflare","title":"Verify access to justcarlson.com","owner":"main","depends_on":[],"acceptance":"Native CLI zone and DNS reads work; correct permissions confirmed."},
-    {"id":"home","title":"Build the home page, opening deck, and prompts","owner":"main","depends_on":["ideation"],"acceptance":"Working navigation, keyboard deck, mobile layout, and offline links."},
-    {"id":"motion","title":"Build Seed Courier with Opus 5.5","owner":"Opus delegate and main integrator","depends_on":["ideation"],"acceptance":"Original model-authored animation; help, pause, replay, palette, pace, keyboard, and reduced motion verified."},
-    {"id":"clarity","title":"Build Make it clearer","owner":"main","depends_on":["ideation"],"acceptance":"Prepared output labeled, facts preserved, correct source highlights, audience check, and reset."},
-    {"id":"review","title":"Apply Anthropic design review","owner":"Sonnet or Opus delegate","depends_on":["home","motion","clarity"],"acceptance":"Actual rendered work reviewed; model, scope, receipt, and applied fixes recorded."},
-    {"id":"cloud-handoff","title":"Hand the integrated repository to Codex Cloud","owner":"main","depends_on":["home","motion","clarity"],"acceptance":"Correct repository environment and cloud task verified, or exact setup blocker documented."},
-    {"id":"publish","title":"Publish and verify the public custom domain","owner":"main","depends_on":["review"],"acceptance":"HTTPS site opens without login; both demos and links work."},
-    {"id":"backup","title":"Create and test a downloadable offline copy","owner":"main","depends_on":["home","motion","clarity"],"acceptance":"ZIP opens with networking disabled; controls and relative links work."},
-    {"id":"handover","title":"Update mobile overview with live links and presenter notes","owner":"Codex delegate or main","depends_on":["publish","backup"],"acceptance":"Short Tailplan has a clear launch link; public repo and local state are current."},
-    {"id":"video","title":"Optional FAL video","owner":"main","depends_on":["publish"],"optional":true,"acceptance":"Only generate if credentials, a price quote, and the remaining task budget allow."}
+    {
+      "id": "repository",
+      "title": "Create and verify the public GitHub repository",
+      "owner": "main",
+      "depends_on": [],
+      "acceptance": "Public visibility and source commits verified."
+    },
+    {
+      "id": "research",
+      "title": "Find recent demo inspiration with Last30Days",
+      "owner": "main",
+      "depends_on": [],
+      "acceptance": "Real links, dates, model names, and research limitations recorded."
+    },
+    {
+      "id": "ideation",
+      "title": "Collect ideas from Opus and Codex in separate worktrees",
+      "owner": "two delegated workers",
+      "depends_on": [
+        "repository"
+      ],
+      "acceptance": "Both contributions and exact model provenance integrated."
+    },
+    {
+      "id": "mobile-plan",
+      "title": "Publish a short mobile Tailplan overview",
+      "owner": "Codex delegate",
+      "depends_on": [
+        "ideation"
+      ],
+      "acceptance": "Same URL updated; phone layout, keyboard link, and copy verified."
+    },
+    {
+      "id": "cloudflare",
+      "title": "Verify access to justcarlson.com",
+      "owner": "main",
+      "depends_on": [],
+      "acceptance": "Native CLI zone and DNS reads work; correct permissions confirmed."
+    },
+    {
+      "id": "home",
+      "title": "Build the home page, opening deck, and prompts",
+      "owner": "main",
+      "depends_on": [
+        "ideation"
+      ],
+      "acceptance": "Working navigation, keyboard deck, mobile layout, and offline links."
+    },
+    {
+      "id": "motion",
+      "title": "Build Seed Courier with Opus 5.5",
+      "owner": "Opus delegate and main integrator",
+      "depends_on": [
+        "ideation"
+      ],
+      "acceptance": "Original model-authored animation; help, pause, replay, palette, pace, keyboard, and reduced motion verified."
+    },
+    {
+      "id": "clarity",
+      "title": "Build Make it clearer",
+      "owner": "main",
+      "depends_on": [
+        "ideation"
+      ],
+      "acceptance": "Prepared output labeled, facts preserved, correct source highlights, audience check, and reset."
+    },
+    {
+      "id": "review",
+      "title": "Apply Anthropic design review",
+      "owner": "Sonnet or Opus delegate",
+      "depends_on": [
+        "home",
+        "motion",
+        "clarity"
+      ],
+      "acceptance": "Actual rendered work reviewed; model, scope, receipt, and applied fixes recorded."
+    },
+    {
+      "id": "cloud-handoff",
+      "title": "Hand the integrated repository to Codex Cloud",
+      "owner": "main",
+      "depends_on": [
+        "home",
+        "motion",
+        "clarity"
+      ],
+      "acceptance": "Correct repository environment and cloud task verified, or exact setup blocker documented."
+    },
+    {
+      "id": "publish",
+      "title": "Publish and verify the public custom domain",
+      "owner": "main",
+      "depends_on": [
+        "review"
+      ],
+      "acceptance": "HTTPS site opens without login; both demos and links work."
+    },
+    {
+      "id": "backup",
+      "title": "Create and test a downloadable offline copy",
+      "owner": "main",
+      "depends_on": [
+        "home",
+        "motion",
+        "clarity"
+      ],
+      "acceptance": "ZIP opens with networking disabled; controls and relative links work."
+    },
+    {
+      "id": "handover",
+      "title": "Update mobile overview with live links and presenter notes",
+      "owner": "Codex delegate or main",
+      "depends_on": [
+        "publish",
+        "backup"
+      ],
+      "acceptance": "Short Tailplan has a clear launch link; public repo and local state are current."
+    },
+    {
+      "id": "video",
+      "title": "Optional FAL video",
+      "owner": "main",
+      "depends_on": [
+        "publish"
+      ],
+      "optional": true,
+      "acceptance": "Only generate if credentials, a price quote, and the remaining task budget allow."
+    }
   ]
 }
