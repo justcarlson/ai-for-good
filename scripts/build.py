@@ -50,5 +50,5 @@ with zipfile.ZipFile(downloads / 'ai-for-good.zip', 'w', zipfile.ZIP_DEFLATED) a
             archive.writestr(relative, html.replace(download_link, '<span>Offline copy</span>'))
         else:
             archive.write(file, relative)
-    archive.writestr('START-HERE.txt', 'Open index.html in your browser. No internet or installation is needed.\nSeed Courier and Make it clearer have local controls and prepared examples.\nAI for Good: https://github.com/justcarlson/ai-for-good\n')
+    archive.writestr('START-HERE.txt', 'Open index.html in your browser. No internet or installation is needed.\nThirteen activities: six interactive demos and seven guided exercises.\nAI for Good: https://github.com/justcarlson/ai-for-good\n')
 print('Built classic-script renderer and public/downloads/ai-for-good.zip')

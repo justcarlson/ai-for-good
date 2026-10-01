@@ -60,3 +60,24 @@ viewport sizes passed without overflow; desktop and phone axe checks found no
 violations or incomplete checks. All four slides worked by keyboard. The extracted
 offline landing showed six demo cards and seven guide links with the stylesheet
 loaded. Exact model and generation receipts are retained beside this file.
+
+## Fourth release: presenter navigation and paper guide
+
+Opus selected three improvements: keep menu and route choices in links, add
+Clear filters, and print the selected guide mode with its prepared example.
+Codex implemented the URL state and extended it through all six demos, so their
+return links also retain the choices. No browser storage or network service is
+required. The first direction response ended at its output limit after all three
+recommendations; the raw response and receipt are retained as such.
+
+Opus reviewed four actual views: desktop and phone filtered menus, the phone
+180-minute route, and page one of a browser-generated paper guide. It also read
+the navigation source. Its verdict was ready with minor corrections: shorter
+empty-state copy, consistent US spelling, a narrower paper fallback paragraph,
+and equal phone route buttons. All four were applied. Existing keyboard and
+reduced-motion press behavior was retained.
+
+Twenty-eight browser checks passed, including navigation, resets, invalid query
+values, denied history updates, print state restoration and offline files.
+Three axe audits returned zero violations and zero incomplete checks. Opus did
+not run those interaction tests; Codex did. Physical printing was not tested.

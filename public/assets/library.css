@@ -11,3 +11,18 @@
 .activity-card{padding:22px 24px}.activity-card h2{font-size:27px;margin:10px 0 10px}.activity-card>p{line-height:1.55}.activity-times{color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-bottom:14px}.card-links{margin-top:auto}.guide-source p,.guide-prompt blockquote,.mode-panel ol{max-width:68ch}.route-list li{grid-template-columns:85px 1fr auto}.route-tabs button{font-size:15px}.library-actions .primary{order:-1}
 @media(max-width:620px){.library-actions{margin:14px 0 16px;gap:10px}.activity-guide .library-actions>.primary{width:100%}.activity-card{padding:18px}.activity-card h2{font-size:25px}.mode-tabs{padding-bottom:12px}.mode-tabs button{flex:1}.preset-row{margin:14px 0 8px}.route-list li{grid-template-columns:55px 1fr}.route-list li{padding:16px 0}.tune-transport{gap:10px 14px}.tune-transport .primary{flex:1 1 100%}}
 @media print{.tune-transport{position:static}}
+
+/* Opus 5.5: presenter controls and paper guide. */
+#clear-filters,.no-results .copy-button{touch-action:manipulation}
+@media(max-width:620px){.route-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media print{
+  @page{margin:15mm}
+  .activity-guide,.activity-guide *{color:#000!important;box-shadow:none!important;text-shadow:none!important}
+  .activity-guide .prepared-panel{background:none}
+  .activity-guide h2{break-after:avoid}
+  .activity-guide .mode-panel ol,.activity-guide blockquote,.activity-guide .debrief-panel{break-inside:avoid}
+  .activity-guide .prepared-panel summary{list-style:none}
+  .activity-guide .prepared-panel summary::-webkit-details-marker{display:none}
+  .activity-guide .guide-prompt .small-note{display:none}
+  .activity-guide #paper-fallback{max-width:68ch}
+}

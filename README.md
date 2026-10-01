@@ -23,11 +23,14 @@ Use the home page’s **Start the workshop** button for four opening slides.
 Arrow keys move between slides; Escape returns to the home page. The activity
 menu filters by theme, format and time. Routes cover 15, 30, 60 and 180 minutes.
 The three-hour route is optional for the whole event, shared across speakers.
+Menu links keep your filters and presenter mode as you move between pages.
+Route links keep the selected time. Use **Clear filters** to show all activities.
 
 Download and unzip the offline copy before presenting. Open `index.html` in the
 extracted folder. All activities, demos and guides work without internet. The
 prompt copy controls fall back to text selection if browser permissions require
-it. External links still need internet. Print styles are included for paper use.
+it. External links still need internet. **Print this activity** prints the selected
+mode and prepared example; presenter mode also includes the debrief.
 
 ## Build and preview
 
@@ -55,7 +58,8 @@ and reviewed rendered screenshots. Codex implemented that direction, corrected
 facts and arithmetic, and ran UAT. OpenAI work used ChatGPT subscription access.
 
 Opus 5.5 then revised copy and design across the site using Emil Kowalski’s skills.
-That pass shipped in two verified releases, with a final Opus screenshot review.
+That pass shipped in verified releases for copy, design, the landing page and
+presenter navigation. Each had an Opus screenshot review.
 
 - [Opus copy/design pass and verification](docs/provenance/OPUS-SITE-POLISH.md)
 - [Anthropic direction, review and corrections](docs/provenance/EXPANSION.md)
@@ -64,7 +68,8 @@ That pass shipped in two verified releases, with a final Opus screenshot review.
 - [Original Opus ideas](docs/ideas-opus.md) and [original Codex text ideas](docs/ideas-codex.md)
 
 Work ran in isolated worktrees, with at most two independent workers. The owner
-raised the paid task cap to $2; the $5 UTC-month cap stayed in place. Receipts are
+raised the paid task cap to $2, then removed that cap for the Opus polish pass.
+The $5 UTC-month cap stayed in place. Receipts are
 under `docs/provenance/`. No generated video or runtime API keys are required.
 
 `task.json` defines assignments and acceptance criteria. The main session keeps

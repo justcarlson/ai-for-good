@@ -1,0 +1,23 @@
+```json
+{
+  "direction": "Make the site remember the presenter's choices and make the guide print cleanly. Carry state in URL query parameters so it works the same on static HTTP and file://. Use no storage APIs as the source of truth, add no new content, and leave the artwork alone. The changes should go unnoticed in use: going back returns the presenter to the screen they left.",
+  "changes": [
+    {
+      "area": "Activity menu state continuity and reset (workshop.html, library.js, activity.js)",
+      "behavior": "On load, read theme, format, time and host from the query string. Validate each value against the existing select options and fall back to 'all' or off when invalid. On every filter change or presenter toggle, rebuild the query and call history.replaceState inside try/catch, because file:// can throw in some browsers. The links remain the real carrier of state. Each card's guide and demo link appends menu=<encodeURIComponent of the current menu query>. activity.js reads the menu parameter, accepts only the theme, format, time and host keys, and rewrites the masthead 'Activities' link to workshop.html?<menu>. The presenter toggle on the guide also updates host inside that rebuilt link. Show a reset control in .library-actions only when any filter is not 'all'. Pressing it sets all three selects to 'all', keeps presenter mode unchanged, re-renders, updates the URL and moves focus to the Theme select. The same reset button is appended inside the no-results message.",
+      "exactCopy": "Reset button: 'Clear filters'. No-results text stays as written: 'No activities match. Choose a longer time or another theme.' followed by the 'Clear filters' button. Status stays: '{n} of 13 activities'.",
+      "design": "Reuse the .copy-button style. The reset button appears and disappears with no animation, because it reflects state the user just set. Pressed feedback is transform: scale(0.97) on :active over 120ms using the existing ease-out. Any hover styles are gated behind (hover: hover) and (pointer: fine). Set touch-action: manipulation on the button. The control does not shift the filters row: it lives in the actions row above."
+    },
+    {
+      "area": "Route selection continuity (routes.html, routes.js, activity.js)",
+      "behavior": "Identify each route by its minutes value, for example ?route=180. On load, select the route whose minutes match the parameter. If the parameter is missing or matches no route, select the first route, which is the current behavior. A tab click calls render, then history.replaceState inside try/catch with ?route=<minutes>. Guide links from a route add &route=<minutes> alongside the existing &host=1. On the guide, a valid route parameter rewrites the masthead 'Routes' link to routes.html?route=<minutes>. Demo links are left unchanged, because demos are separate pages and are out of scope for this release. Move focus to the pressed tab only on click. Do not move focus on load.",
+      "exactCopy": "No new copy. Tab labels stay '{minutes} minutes'.",
+      "design": "Switching route content is instant with no transition. It is a frequent, deliberate action, and the aria-pressed tab is the state indicator."
+    },
+    {
+      "area": "Printable guide (library.css @media print, activity.js)",
+      "behavior": "In a @media print block, hide the masthead nav, skip link, footer, .library-actions buttons, .mode-tabs, #host-tools and the Copy prompt button. Print, in order: the title, summary, the selected mode heading with its time line and steps, the paper fallback when that mode is active, the starting material, the prompt and the prepared example. Include the debrief only when presenter mode is on, so the page matches the screen. On the beforeprint event, record whether the prepared example details element was open, force it open, then restore the original state on afterprint. The Print button keeps calling window.print().",
+      "exactCopy": "Button stays 'Print this activity'. No added text. The existing mode heading ('Show it' / 'Try it' / 'On paper') labels which version is on paper.",
+      "design": "Print in black on white: background none and color #000, keeping existing type sizes in pt-friendly units. Use break-inside: avoid on the steps list, blockquote and debrief. Use break-after: avoid on h2. Hide the details summary marker. Set @page margin to 15mm. Turn off shadows and decorative backgrounds. Keep the seed wordmark image only if it prints crisply as SVG, otherwise hide it."
+    }
+  

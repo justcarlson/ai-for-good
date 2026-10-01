@@ -205,6 +205,15 @@
         "publish"
       ],
       "acceptance": "Whole-site review, verified incremental copy and design releases, offline copy refreshed, exact model and skill provenance retained."
+    },
+    {
+      "id": "presenter-flow",
+      "title": "Preserve presenter choices between activities and routes",
+      "owner": "Opus 5.5 direction; main implementation and UAT",
+      "depends_on": [
+        "opus-site-polish"
+      ],
+      "acceptance": "Menu filters, presenter mode and route survive navigation and refresh; reset is clear; browser and offline checks pass."
     }
   ]
 }
