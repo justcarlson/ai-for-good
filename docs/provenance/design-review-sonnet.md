@@ -18,4 +18,4 @@ On the phone home screen, the illustration tagline slightly overlaps a "+" mark.
 
 Reviewed four rendered screenshots: desktop and phone home page, desktop Seed Courier, and desktop Make it clearer. This was a visual review, not an interaction or accessibility test.
 
-Applied: darker secondary text and larger labels; a Play the story button on the canvas; model credit beside the title; a shorter desktop hero and stronger demo arrows; aligned clarity headings and an inset selection marker; moved the phone illustration note. The integrator tested controls separately.
+Applied: darker secondary text and larger labels; a Play the story button on the canvas; model credit beside the title; animation controls above the scene; a shorter desktop hero and stronger demo arrows; aligned clarity headings and an inset selection marker; moved the phone illustration note. The integrator tested controls separately.

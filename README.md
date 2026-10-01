@@ -13,7 +13,7 @@ installation, or live model call is needed to run them.
 
 ## Present it
 
-1. Open the workshop and choose **Start here** for four opening slides.
+1. Open the workshop and choose **Start the workshop** for four opening slides.
    Arrow keys move between slides; Escape returns to the home page.
 2. Open Seed Courier. Press **Play the story**, invite helpers, then try Blueprint.
 3. Open Make it clearer. Reveal the example, check the drivers’ arrival time,

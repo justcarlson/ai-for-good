@@ -12,9 +12,17 @@ assert scene.startswith('export function drawScene('), 'Unexpected renderer form
     scene.replace('export function drawScene(', 'function drawScene(', 1))
 downloads = public / 'downloads'
 downloads.mkdir(exist_ok=True)
+download_link = '<a href="downloads/ai-for-good.zip" download>Download an offline copy ↓</a>'
 with zipfile.ZipFile(downloads / 'ai-for-good.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
     for file in sorted(public.rglob('*')):
-        if file.is_file() and 'downloads' not in file.relative_to(public).parts and not file.name.startswith('_'):
-            archive.write(file, str(file.relative_to(public)))
+        if not file.is_file() or 'downloads' in file.relative_to(public).parts or file.name.startswith('_') or file.name == '404.html':
+            continue
+        relative = str(file.relative_to(public))
+        if relative == 'index.html':
+            html = file.read_text()
+            assert html.count(download_link) == 1, 'Offline download link changed'
+            archive.writestr(relative, html.replace(download_link, '<span>Offline copy</span>'))
+        else:
+            archive.write(file, relative)
     archive.writestr('START-HERE.txt', 'Open index.html in your browser. No internet or installation is needed.\nSeed Courier and Make it clearer have local controls and prepared examples.\nAI for Good: https://github.com/justcarlson/ai-for-good\n')
 print('Built classic-script renderer and public/downloads/ai-for-good.zip')

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "ai-for-good-workshop-2026-10-01",
-  "objective": "Publish a polished workshop home page and runnable AI for Good demos, with a mobile overview and a public source repository.",
+  "objective": "Publish a flexible AI for Good workshop library with quick demos, guided exercises, and group activities for a three-hour event, plus a mobile launch guide and offline copy.",
   "deadline": {
     "ready_for_rehearsal_utc": "2026-10-01T12:30:00Z",
     "presentation_utc": "2026-10-01T13:00:00Z",
@@ -12,7 +12,7 @@
   "constraints": {
     "max_independent_workers": 2,
     "openai_auth": "ChatGPT subscription",
-    "paid_task_cap_usd": 0.5,
+    "paid_task_cap_usd": 2,
     "paid_utc_month_cap_usd": 5,
     "motion_model": "anthropic/claude-opus-5.5",
     "design_review_models": [
@@ -21,7 +21,8 @@
     ],
     "employer_branding": false,
     "fictional_data_only": true,
-    "max_preview_servers": 1
+    "max_preview_servers": 1,
+    "content_mix": "Everyday work and community projects"
   },
   "coordination": {
     "task_owner": "main Codex session",
@@ -164,6 +165,34 @@
       ],
       "optional": true,
       "acceptance": "Only generate if credentials, a price quote, and the remaining task budget allow."
+    },
+    {
+      "id": "expanded-demos",
+      "title": "Add four interactive demos",
+      "owner": "main, Codex, Opus",
+      "depends_on": [
+        "publish"
+      ],
+      "acceptance": "Six total interactive demos, all usable offline with keyboard and prepared-output labels."
+    },
+    {
+      "id": "activity-library",
+      "title": "Add six flexible facilitated activities",
+      "owner": "main",
+      "depends_on": [
+        "publish"
+      ],
+      "acceptance": "Each has presenter-only and participant options, timings, input, prompt, sample output, and debrief."
+    },
+    {
+      "id": "facilitator-menu",
+      "title": "Build an activity chooser and session routes",
+      "owner": "main",
+      "depends_on": [
+        "expanded-demos",
+        "activity-library"
+      ],
+      "acceptance": "Choose by time and format; coherent short slots and an optional full three-hour route."
     }
   ]
 }

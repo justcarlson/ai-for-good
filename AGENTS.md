@@ -11,7 +11,7 @@ Claude Opus 5.5 or Sonnet 5.5. Preserve exact provider model IDs and generation
 receipts; never relabel a model or claim an unperformed review.
 
 Use ChatGPT subscription authentication for OpenAI. Paid model work has a hard
-$0.50 limit for this task and a $5 limit per UTC calendar month. Enforce limits
+$2.00 limit for this task (increased by the owner on 2026-10-01) and a $5 limit per UTC calendar month. Enforce limits
 before calls. Do not buy credits or raise limits. Keep secrets outside Git and
 client code. Use Infisical Shared/dev through the owner's approved workflow.
 
