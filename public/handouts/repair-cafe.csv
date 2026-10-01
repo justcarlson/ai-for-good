@@ -1,0 +1,25 @@
+visit,session,item,fixed,wait_minutes,volunteers
+1,1,Bike,yes,10,4
+2,1,Bike,yes,14,4
+3,1,Clothing,yes,8,4
+4,1,Small electrical,no,16,4
+5,2,Clothing,yes,9,4
+6,2,Bike,yes,15,4
+7,2,Small electrical,yes,12,4
+8,2,Clothing,no,12,4
+9,3,Small electrical,no,30,2
+10,3,Small electrical,yes,26,2
+11,3,Bike,no,22,2
+12,3,Clothing,yes,22,2
+13,4,Bike,yes,10,4
+14,4,Clothing,yes,12,4
+15,4,Bike,no,14,4
+16,4,Small electrical,yes,12,4
+17,5,Small electrical,no,28,2
+18,5,Small electrical,yes,30,2
+19,5,Small electrical,no,24,2
+20,5,Bike,yes,18,2
+21,6,Clothing,yes,8,4
+22,6,Bike,yes,14,4
+23,6,Small electrical,yes,16,4
+24,6,Clothing,yes,10,4

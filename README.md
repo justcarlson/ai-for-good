@@ -1,32 +1,37 @@
 # AI for Good
 
-[Open the workshop](https://good.justcarlson.com) · [Hosting backup](https://ai-for-good-workshop.pages.dev) · [Download the offline copy](https://good.justcarlson.com/downloads/ai-for-good.zip)
+[Open the workshop](https://good.justcarlson.com) · [Activity menu](https://good.justcarlson.com/workshop.html?host=1) · [Routes](https://good.justcarlson.com/routes.html) · [Offline ZIP](https://good.justcarlson.com/downloads/ai-for-good.zip)
 
-Two small browser demos, an opening presentation, and reusable prompts. No login,
-installation, or live model call is needed to run them.
+Thirteen activities for a flexible workshop: six interactive demos and seven
+guided exercises. Each guide has Show it, Try it and On paper modes, a prompt,
+fictional input, prepared material, and debrief questions. Presenter mode adds
+steps and an optional timer. No login or live model call is needed.
 
-- **Seed Courier:** a 45-second garden story drawn and animated by Claude Opus 5.5.
-  Press Play, add helpers, change the palette or pace, and replay. Motion off
-  provides still scenes.
-- **Make it clearer:** inspect a prepared rewrite of a fictional volunteer notice.
-  Select an action to see its source, then ask whether bringing a bag is required.
+## Choose what fits
 
-## Present it
+| Interactive demos | Guided activities |
+| --- | --- |
+| Seed Courier: an original animated garden story | Ask a Better Question |
+| Make it clearer: preserve facts in a rewrite | Spot the Slip |
+| Claim Check Board: inspect claims against sources | Story Spark Circle |
+| Tiny Tune Maker: compose an original browser loop | Plan B Workshop |
+| Tradeoff Week Planner: fit tasks into limited hours | Tool or Not? |
+| Pattern Finder: explore a fictional repair-cafe dataset | Explain It Two Ways |
+| | Role Swap Planning Table |
 
-1. Open the workshop and choose **Start the workshop** for four opening slides.
-   Arrow keys move between slides; Escape returns to the home page.
-2. Open Seed Courier. Press **Play the story**, invite helpers, then try Blueprint.
-3. Open Make it clearer. Reveal the example, check the drivers’ arrival time,
-   and ask the audience the bag question.
-4. Use **Take a prompt** to let people try a change themselves.
+Use the home page’s **Start the workshop** button for four opening slides.
+Arrow keys move between slides; Escape returns to the home page. The activity
+menu filters by theme, format and time. Routes cover 15, 30, 60 and 180 minutes.
+The three-hour route is optional for the whole event, shared across speakers.
 
 Download and unzip the offline copy before presenting. Open `index.html` in the
-extracted folder. Both demos and the deck work without internet; external links
-and the prompt clipboard button may need the normal browser permissions.
+extracted folder. All activities, demos and guides work without internet. The
+prompt copy controls fall back to text selection if browser permissions require
+it. External links still need internet. Print styles are included for paper use.
 
 ## Build and preview
 
-Requires Python 3 and Node.js for syntax checks. No packages need installing.
+Requires Python 3 and Node.js. No packages need installing.
 
 ```sh
 npm run build
@@ -34,26 +39,30 @@ npm run check
 npm run dev
 ```
 
-The preview uses `http://127.0.0.1:4173`. Reuse the running server if there is one;
-only the main session may start it. All delegates share this preview. Cloud
-workers use source checks or the public site and must not start another server.
+Reuse the single running preview at `http://127.0.0.1:4173`. Only the main session
+may start it. Cloud workers use source checks or the public site; no extra server.
 
-The build preserves the Opus renderer, exposes it as a classic browser script,
-and packages the static site into `public/downloads/ai-for-good.zip`.
-Cloudflare Pages serves `public/`; `vercel.json` keeps the site portable.
+The build packages the Opus renderers, turns `content/workshop-library.json` into
+a local browser script, validates route totals, and creates the offline ZIP.
+Checks cover every JavaScript file, local page links, offline links and ZIP
+integrity. Cloudflare Pages serves `public/`; `vercel.json` keeps it portable.
 
-## Models and review
+## Creative direction and verification
 
-- Opus 5.5 supplied [motion ideas](docs/ideas-opus.md) and [the renderer](src/seed-scene.js).
-- Codex supplied [text ideas](docs/ideas-codex.md), workshop pages, and controls.
-  OpenAI work used ChatGPT subscription authentication.
-- Sonnet 5.5 reviewed four rendered screenshots. Its [review and applied fixes](docs/provenance/design-review-sonnet.md)
-  and [provider receipt](docs/provenance/design-review-sonnet.receipt.json) are recorded.
-- [Codex Cloud handoff](docs/CODEX-CLOUD-HANDOFF.md) records the cloud task and its scope.
+Opus 5.5 authored the Seed Courier motion and Tiny Tune audio engine. Sonnet 5.5
+selected the expansion concepts, supplied the first layouts and exercise drafts,
+and reviewed rendered screenshots. Codex implemented that direction, corrected
+facts and arithmetic, and ran UAT. OpenAI work used ChatGPT subscription access.
 
-Ideas were produced in separate Git worktrees. Paid models stayed within the
-$0.50 task limit. Generated video was omitted to keep the workshop within budget.
-No credentials or private plans are included in this repository.
+- [Anthropic direction, review and corrections](docs/provenance/EXPANSION.md)
+- [Browser and offline verification](docs/VERIFICATION.md)
+- [Codex Cloud handoff](docs/CODEX-CLOUD-HANDOFF.md)
+- [Original Opus ideas](docs/ideas-opus.md) and [original Codex text ideas](docs/ideas-codex.md)
+
+Work ran in isolated worktrees, with at most two independent workers. The owner
+raised the paid task cap to $2; the $5 UTC-month cap stayed in place. Receipts are
+under `docs/provenance/`. No generated video or runtime API keys are required.
 
 `task.json` defines assignments and acceptance criteria. The main session keeps
-private runtime progress in ignored `state.json`.
+private runtime progress in ignored `state.json`. Credentials and private plans
+are excluded from Git.

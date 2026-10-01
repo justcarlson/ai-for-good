@@ -22,7 +22,8 @@
     "employer_branding": false,
     "fictional_data_only": true,
     "max_preview_servers": 1,
-    "content_mix": "Everyday work and community projects"
+    "content_mix": "Everyday work and community projects",
+    "creative_lead": "Claude Opus 5.5 or Sonnet 5.5: all new ideas and first design pass; Codex integrates and reviews."
   },
   "coordination": {
     "task_owner": "main Codex session",

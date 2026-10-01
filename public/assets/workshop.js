@@ -4,7 +4,7 @@ if (deck) {
     {kicker:'01 / A little imagination',title:'What could you make in twenty minutes?',description:'Start with a small idea that helps someone. We’ll try a story, then a practical task.',label:'Explore the demos ↓',href:'#demos'},
     {kicker:'02 / Creative code',title:'Give a small idea room to grow.',description:'A tiny courier has a seed to deliver. Add a helper, change the pace, and see how the story feels.',label:'Open Seed Courier ↗',href:'demos/seed-courier.html'},
     {kicker:'03 / Words & judgment',title:'Can you find your next step?',description:'Read a fictional volunteer notice. Check the prepared AI draft: did the times, exceptions, and missing details survive?',label:'Open Make it clearer ↗',href:'demos/make-it-clearer.html'},
-    {kicker:'04 / Your turn',title:'Make one small thing useful.',description:'Pick a fictional task. Give the model a clear brief. Change one detail, then ask a partner to check the result.',label:'Open the workshop prompts ↗',href:'prompts.html'}
+    {kicker:'04 / Your turn',title:'Make one small thing useful.',description:'Pick a fictional task. Give the model a clear brief. Change one detail, then ask a partner to check the result.',label:'Choose an activity ↗',href:'workshop.html'}
   ];
   let index = 0;
   const previous = document.querySelector('#previous-slide');

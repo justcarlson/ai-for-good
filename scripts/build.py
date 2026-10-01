@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Package the Opus renderer for classic scripts and create the offline copy."""
 from pathlib import Path
+import json
 import zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -10,6 +11,31 @@ assert scene.startswith('export function drawScene('), 'Unexpected renderer form
 (public / 'assets/seed-scene.js').write_text(
     '// Scene authored by Claude Opus 5.5. See docs/provenance.\n' +
     scene.replace('export function drawScene(', 'function drawScene(', 1))
+audio = ROOT / 'src/tiny-tune.js'
+if audio.exists():
+    (public / 'assets/tiny-tune-engine.js').write_text(audio.read_text())
+library_source = ROOT / 'content/workshop-library.json'
+if library_source.exists():
+    library = json.loads(library_source.read_text())
+    activities = []
+    for section, kind in [('existing', 'interactive'), ('newInteractive', 'interactive'), ('facilitated', 'guided')]:
+        for original in library[section]:
+            entry = {key: value for key, value in original.items()
+                     if key not in ('interactionSpec', 'layoutSpec', 'mode')}
+            entry['kind'] = kind
+            if kind == 'interactive':
+                entry['demoPath'] = f"demos/{entry['id']}.html"
+            activities.append(entry)
+    ids = {entry['id'] for entry in activities}
+    assert len(ids) == len(activities), 'Duplicate activity IDs'
+    for route in library['routes']:
+        assert sum(step['minutes'] for step in route['steps']) == route['minutes'], 'Route time mismatch'
+        assert all(step['activityId'] in ids or step['activityId'] == 'break' for step in route['steps'])
+    for preset in library['audioPresets']:
+        assert len(preset['notes']) == 8 and all(note in range(-1, 5) for note in preset['notes'])
+    browser_library = {'activities': activities, 'routes': library['routes'], 'audioPresets': library['audioPresets']}
+    (public / 'assets/workshop-library.js').write_text(
+        'window.WORKSHOP_LIBRARY = ' + json.dumps(browser_library, ensure_ascii=False) + ';\n')
 downloads = public / 'downloads'
 downloads.mkdir(exist_ok=True)
 download_link = '<a href="downloads/ai-for-good.zip" download>Download an offline copy ↓</a>'

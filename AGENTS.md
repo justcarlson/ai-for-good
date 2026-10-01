@@ -6,6 +6,10 @@ Do not include employer branding. Use original artwork and fictional data.
 At most two independent workers may run, each in its own Git worktree with a
 distinct assignment. The main Codex session integrates and verifies their work.
 
+For workshop expansion, Opus 5.5 or Sonnet 5.5 owns concept selection, copy, and
+the first design pass. Codex implements their direction, critiques it, and owns
+UAT. Do not substitute Codex-led ideation for the Anthropic creative pass.
+
 The motion demo must be authored by Claude Opus 5.5. Final visual review must use
 Claude Opus 5.5 or Sonnet 5.5. Preserve exact provider model IDs and generation
 receipts; never relabel a model or claim an unperformed review.
