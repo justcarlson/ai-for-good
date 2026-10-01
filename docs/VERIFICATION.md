@@ -116,3 +116,10 @@ numeric qualifiers, sample evidence and mobile navigation were applied.
 Private evidence: `.local/writing-checks.json`, `writing-axe-final.json` and
 `writing-review-fix-checks.json`. Prepared examples exercise editorial judgment;
 no learner draft is scored and no live model runs in this application.
+
+Publication verified at `https://good.justcarlson.com/writing.html`. All 11
+changed public files, including the offline ZIP, matched local SHA-256 hashes.
+The live phone check confirmed blank learner answers, collapsed prepared
+examples, preserved voice rules, labeled hints, fitted fields and no page
+errors under the production content policy. Evidence:
+`.local/writing-published-hashes.json` and `.local/writing-live-check.json`.
