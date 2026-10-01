@@ -23,7 +23,9 @@
     "fictional_data_only": true,
     "max_preview_servers": 1,
     "content_mix": "Everyday work and community projects",
-    "creative_lead": "Claude Opus 5.5 or Sonnet 5.5: all new ideas and first design pass; Codex integrates and reviews."
+    "creative_lead": "Claude Opus 5.5 or Sonnet 5.5: all new ideas and first design pass; Codex integrates and reviews.",
+    "site_polish_task_cap_usd": null,
+    "site_polish_authorization": "2026-10-01: Owner removed the task cap for the Opus whole-site copy/design pass. $5 UTC-month limit remains."
   },
   "coordination": {
     "task_owner": "main Codex session",
@@ -194,6 +196,15 @@
         "activity-library"
       ],
       "acceptance": "Choose by time and format; coherent short slots and an optional full three-hour route."
+    },
+    {
+      "id": "opus-site-polish",
+      "title": "Apply Opus 5.5 copy and design pass using Emil skills",
+      "owner": "Opus 5.5 creative lead; main integration and UAT",
+      "depends_on": [
+        "publish"
+      ],
+      "acceptance": "Whole-site review, verified incremental copy and design releases, offline copy refreshed, exact model and skill provenance retained."
     }
   ]
 }

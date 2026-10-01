@@ -14,5 +14,32 @@ factual copy slips: a 60-second demo is about a minute, and the activity menu
 lists all 13 activities. Source facts, prepared answers, prompts, route durations
 and DOM IDs are preserved. Desktop/phone layout checks passed.
 
-The design pass follows as a separate verified release. The owner removed the
-per-task spending cap for this pass; the existing $5 UTC-month limit remains.
+## Second release: design
+
+Opus corrected the five shared/page stylesheets: a proportional local font stack,
+clearer card hierarchy, shorter mobile headers, 44px controls where appropriate,
+16px phone inputs, capability-gated hover and press feedback. Keyboard focus and
+reduced motion suppress press movement. No font download or runtime dependency
+was added.
+
+Opus then reviewed 11 real rendered screenshots. It removed its own proposed
+sticky audio bar because it could cover content, and corrected the remaining
+15px textarea. The main session applied those findings and checked the final
+mobile note grid: all rows remain visible and usable.
+
+All 48 desktop/phone page and guide layout checks passed. Axe reported zero
+violations across 12 pages. The remaining incomplete checks concern decorative
+art, note dots and clipped table content; existing colors were retained. Twenty-four
+control and offline checks passed, including slides, filters, timer preservation,
+prepared answers, reset, reduced-motion scenes and audio controls. Browser console
+reported no errors. The build validates all 13 scripts, links and the offline ZIP.
+
+This covers browser checks and rendered viewport sizes, not physical iPhone,
+Android, room-speaker or printer testing. Copy/source facts and route timings stay
+unchanged after the first release.
+
+Exact model: `anthropic/claude-opus-5.5`. Original design edits, final visual findings
+and provider receipts sit beside this file. Codex integrated and verified the
+edits; it did not substitute a different model for the creative pass. The owner
+removed the per-task spending cap for this pass; the existing $5 UTC-month limit
+remains.

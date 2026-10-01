@@ -54,6 +54,10 @@ selected the expansion concepts, supplied the first layouts and exercise drafts,
 and reviewed rendered screenshots. Codex implemented that direction, corrected
 facts and arithmetic, and ran UAT. OpenAI work used ChatGPT subscription access.
 
+Opus 5.5 then revised copy and design across the site using Emil Kowalski’s skills.
+That pass shipped in two verified releases, with a final Opus screenshot review.
+
+- [Opus copy/design pass and verification](docs/provenance/OPUS-SITE-POLISH.md)
 - [Anthropic direction, review and corrections](docs/provenance/EXPANSION.md)
 - [Browser and offline verification](docs/VERIFICATION.md)
 - [Codex Cloud handoff](docs/CODEX-CLOUD-HANDOFF.md)

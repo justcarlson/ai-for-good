@@ -1,0 +1,33 @@
+{
+  "verdict": "fixes",
+  "review_markdown": "| Before | After | Why |\n| --- | --- | --- |\n| Tiny Tune phone: `.tune-transport{position:sticky;bottom:0;…env(safe-area-inset-bottom)}` | Static transport in normal flow, `gap:10px 14px` kept | In the phone screenshot, the sticky bar is about 200px tall. It covers the instructions and would cover note buttons. Without `viewport-fit=cover`, the inset is also always `0`. A simple in-flow layout is more usable. |\n| Library `textarea{font:15px/1.6 …}` | `font:16px/1.6 …` | iOS zooms in when an input under 16px gets focus, and selects already use 16px. This affects the Pattern Finder guess field. |\n| Other 9 views | No change | Hierarchy, copy, contrast and touch sizes look coherent in the screenshots. Disabled Stop is intentional. |",
+  "replacements": [
+    {
+      "path": "public/assets/library.css",
+      "old": ".tune-transport{position:sticky;bottom:0;z-index:5;background:#faf7ef;border-top:1px solid var(--line);margin-inline:-12px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));gap:10px 14px}",
+      "new": ".tune-transport{gap:10px 14px}",
+      "all": false
+    },
+    {
+      "path": "public/assets/library.css",
+      "old": "font:15px/1.6 var(--sans)",
+      "new": "font:16px/1.6 var(--sans)",
+      "all": false
+    }
+  ],
+  "append_css": [],
+  "coverage": [
+    {
+      "surface": "Tiny Tune phone",
+      "changes": "Transport moved from a sticky bar to normal flow, so it no longer covers notes or copy. Safe-area mismatch removed."
+    },
+    {
+      "surface": "Pattern Finder / library textareas",
+      "changes": "Font size set to 16px to prevent iOS focus zoom."
+    },
+    {
+      "surface": "Home, menu, guide, routes, prompts, Seed Courier, Make it clearer, claim board, planner",
+      "changes": "Reviewed in the screenshots. No change needed."
+    }
+  ]
+}

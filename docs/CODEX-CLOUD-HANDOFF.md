@@ -32,6 +32,9 @@ review only; it did not run an expansion build or browser. The dedicated Cloud
 environment remains unavailable, so this handoff used an isolated review in the
 existing website runtime without changing that repository.
 
+The later [Opus copy/design pass](provenance/OPUS-SITE-POLISH.md) is outside this
+Cloud snapshot. It received separate rendered review and local browser checks.
+
 ## Original two-demo review
 
 The first [cloud task](https://chatgpt.com/codex/tasks/task_e_6abe44a79c8c832ab6f6c092e49bf758)

@@ -39,3 +39,11 @@ Independent Codex UAT covered the claim board and planner after integration on
 the one shared server. The main session covered the menu, guides, routes, data,
 audio, original demos and publication. Anthropic visual review is recorded
 separately under `docs/provenance/`.
+
+## Opus copy and design pass
+
+After the site-wide pass, 48 desktop/phone page checks, 12 axe audits and 24
+control/offline checks passed. No console errors. Final Tiny Tune transport uses
+normal flow, leaving all note rows reachable. Pattern Finder inputs use 16px
+text; desktop hover retains the primary button’s green background. Opus reviewed
+11 real screenshots; its two final corrections were applied and checked.

@@ -1,0 +1,169 @@
+{
+  "review_markdown": "| Before | After | Why |\n| --- | --- | --- |\n| `--sans` began with `ui-sans-serif,system-ui`, which rendered as monospace on Linux | Local stack: Inter, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, DejaVu Sans, Arial, sans-serif | Proportional body text without downloads |\n| 13 ungated `:hover` rules across five stylesheets | Each rule removed from the base and restated inside `@media (hover:hover) and (pointer:fine)` in the same file | Hover no longer sticks after a tap, and primary colors stay intact |\n| Combined `:hover,[aria-pressed]` selectors | Pressed state kept in the base; hover gated; lab hover skips pressed and primary buttons | Selected states still read as selected |\n| No press feedback | `scale(.97)` for 120ms on `:active`, only under `prefers-reduced-motion:no-preference` | Taps confirm immediately |\n| Keyboard focus could pick up the press animation | `:focus-visible` sets `transition:none; transform:none`; the outline stays | Focus shows instantly with no motion |\n| Selects at 12 to 13px on phones | 16px | Prevents iOS zoom on focus |\n| Tiny Tune Play sat below the presets and help text | Transport bar sticks to the bottom of the screen on phones, with a safe-area inset | Play is within thumb reach |\n| Tall phone mastheads and headers | Tighter page-header padding, action margins and masthead height | First controls appear sooner |\n| Dense menu cards | 27px titles, metadata separated by a rule, links pushed to the card bottom | Clearer hierarchy and alignment |\n| Long body lines | `max-width:62ch` on intro and guide text | More comfortable line length |",
+  "replacements": [
+    {
+      "path": "public/assets/workshop.css",
+      "old": "--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif",
+      "new": "--sans:Inter,\"Segoe UI\",Roboto,\"Helvetica Neue\",\"Noto Sans\",\"Liberation Sans\",\"DejaVu Sans\",Arial,sans-serif",
+      "all": false
+    },
+    {
+      "path": "public/assets/workshop.css",
+      "old": ".masthead nav a:hover{text-decoration:underline}",
+      "new": "",
+      "all": false
+    },
+    {
+      "path": "public/assets/workshop.css",
+      "old": ".primary:hover{background:#263c29}",
+      "new": "",
+      "all": false
+    },
+    {
+      "path": "public/assets/workshop.css",
+      "old": ".text-link:hover{color:var(--orange);border-color:var(--orange)}",
+      "new": "",
+      "all": false
+    },
+    {
+      "path": "public/assets/workshop.css",
+      "old": ".demo-row:hover{background:#ece6d8}",
+      "new": "",
+      "all": false
+    },
+    {
+      "path": "public/assets/workshop.css",
+      "old": ".demo-row:hover .demo-arrow{border-color:var(--green);color:var(--green)}",
+      "new": "",
+      "all": false
+    },
+    {
+      "path": "public/assets/workshop.css",
+      "old": ".footer a:hover{text-decoration:underline}",
+      "new": "",
+      "all": false
+    },
+    {
+      "path": "public/assets/workshop.css",
+      "old": ".quiet-button:hover{text-decoration:underline}",
+      "new": "",
+      "all": false
+    },
+    {
+      "path": "public/assets/workshop.css",
+      "old": ".round-button:hover{background:var(--soft)}",
+      "new": "",
+      "all": false
+    },
+    {
+      "path": "public/assets/workshop.css",
+      "old": ".copy-button:hover{background:var(--soft)}",
+      "new": "",
+      "all": false
+    },
+    {
+      "path": "public/assets/clarity.css",
+      "old": ".action-card:hover,.action-card[aria-pressed=\"true\"]{border-color:var(--green);background:#e5ebd9}",
+      "new": ".action-card[aria-pressed=\"true\"]{border-color:var(--green);background:#e5ebd9}",
+      "all": false
+    },
+    {
+      "path": "public/assets/clarity.css",
+      "old": ".check-options button:hover,.check-options button[aria-pressed=\"true\"]{background:var(--green);color:var(--paper)}",
+      "new": ".check-options button[aria-pressed=\"true\"]{background:var(--green);color:var(--paper)}",
+      "all": false
+    },
+    {
+      "path": "public/assets/courier.css",
+      "old": ".timeline button:hover{background:var(--soft)}",
+      "new": "",
+      "all": false
+    },
+    {
+      "path": "public/assets/courier.css",
+      "old": ".remix-controls select{font-size:12px}",
+      "new": ".remix-controls select{font-size:16px}",
+      "all": false
+    },
+    {
+      "path": "public/assets/labs.css",
+      "old": ".lab-main button:hover{background:var(--soft)}",
+      "new": "",
+      "all": false
+    },
+    {
+      "path": "public/assets/labs.css",
+      "old": ".lab-main button.primary:hover{background:#263c29}",
+      "new": "",
+      "all": false
+    },
+    {
+      "path": "public/assets/library.css",
+      "old": ".activity-card h2 a:hover{text-decoration:underline}",
+      "new": "",
+      "all": false
+    },
+    {
+      "path": "public/assets/library.css",
+      "old": ".filters select{max-width:100%;width:100%;font-size:13px}",
+      "new": ".filters select{max-width:100%;width:100%;font-size:16px}.tune-transport select{font-size:16px}",
+      "all": false
+    }
+  ],
+  "append_css": [
+    {
+      "path": "public/assets/workshop.css",
+      "css": "@media (hover:hover) and (pointer:fine){.masthead nav a:hover,.footer a:hover,.quiet-button:hover{text-decoration:underline}.primary:hover{background:#263c29}.text-link:hover{color:var(--orange);border-color:var(--orange)}.demo-row:hover{background:#ece6d8}.demo-row:hover .demo-arrow{border-color:var(--green);color:var(--green)}.round-button:hover,.copy-button:hover{background:var(--soft)}}\n:root{--ease-out:cubic-bezier(.23,1,.32,1)}button,a,summary{touch-action:manipulation}button,.primary,.copy-button{-webkit-user-select:none;user-select:none}.copy-button{color:var(--ink);min-height:44px}.page-header>p,.page-header>div>p{max-width:62ch;line-height:1.6}\n@media (prefers-reduced-motion:no-preference){:is(.primary,.copy-button,.round-button,.quiet-button,button):active{transform:scale(.97);transition:transform 120ms var(--ease-out)}}\n:is(a,button,summary,select,input,textarea):focus-visible{transition:none!important;transform:none!important}\n@media(max-width:620px){.masthead{height:64px}.page-header{padding-block:22px 18px}.page-header h1{margin:8px 0 10px;font-size:42px;letter-spacing:-1.5px}.page-header p{font-size:16px}.hero{padding-block:24px 28px}.try-section{padding-block:32px}}"
+    },
+    {
+      "path": "public/assets/clarity.css",
+      "css": "@media (hover:hover) and (pointer:fine){.action-card:hover{border-color:var(--green);background:#e5ebd9}.check-options button:hover{background:var(--green);color:var(--paper)}}.check-options button{min-height:44px}"
+    },
+    {
+      "path": "public/assets/courier.css",
+      "css": "@media (hover:hover) and (pointer:fine){.timeline button:hover{background:var(--soft)}}select{font-size:14px}.timeline button{min-height:44px}@media(max-width:700px){.courier-heading{padding-bottom:14px}}"
+    },
+    {
+      "path": "public/assets/labs.css",
+      "css": "@media (hover:hover) and (pointer:fine){.lab-main button:not(.primary):not([aria-pressed=true]):hover{background:var(--soft)}.lab-main button.primary:hover{background:#263c29}}@media(max-width:700px){.masthead:has(.lab-nav){min-height:0;padding-block:12px;gap:4px}.lab-panel{padding:18px}.lab-section{margin-top:22px}}"
+    },
+    {
+      "path": "public/assets/library.css",
+      "css": "@media (hover:hover) and (pointer:fine){.activity-card h2 a:hover{text-decoration:underline}}\n.activity-card{padding:22px 24px}.activity-card h2{font-size:27px;margin:10px 0 10px}.activity-card>p{line-height:1.55}.activity-times{color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-bottom:14px}.card-links{margin-top:auto}.guide-source p,.guide-prompt blockquote,.mode-panel ol{max-width:68ch}.route-list li{grid-template-columns:85px 1fr auto}.route-tabs button{font-size:15px}.library-actions .primary{order:-1}\n@media(max-width:620px){.library-actions{margin:14px 0 16px;gap:10px}.activity-guide .library-actions>.primary{width:100%}.activity-card{padding:18px}.activity-card h2{font-size:25px}.mode-tabs{padding-bottom:12px}.mode-tabs button{flex:1}.preset-row{margin:14px 0 8px}.route-list li{grid-template-columns:55px 1fr}.route-list li{padding:16px 0}.tune-transport{position:sticky;bottom:0;z-index:5;background:#faf7ef;border-top:1px solid var(--line);margin-inline:-12px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));gap:10px 14px}.tune-transport .primary{flex:1 1 100%}}\n@media print{.tune-transport{position:static}}"
+    }
+  ],
+  "coverage": [
+    {
+      "surface": "All pages",
+      "changes": "Proportional local font stack, hover gated by capability, scale press feedback without motion on keyboard focus, touch-action, 44px copy buttons, readable line widths, tighter phone headers"
+    },
+    {
+      "surface": "Activity menu",
+      "changes": "Smaller card titles, metadata separated by a rule, links aligned to the card bottom, 16px filter selects"
+    },
+    {
+      "surface": "Guide",
+      "changes": "Open demo comes first and spans full width on phones, mode tabs fill the row, text limited to 68ch"
+    },
+    {
+      "surface": "Routes",
+      "changes": "Auto-width link column, larger tabs, compact phone rows"
+    },
+    {
+      "surface": "Seed Courier",
+      "changes": "Timeline hover gated, 16px phone selects, 44px scene buttons"
+    },
+    {
+      "surface": "Make it clearer",
+      "changes": "Action and check hover gated while pressed states stay visible, 44px options"
+    },
+    {
+      "surface": "Claim board and planner",
+      "changes": "Lab hover skips pressed and primary buttons, shorter phone masthead, tighter panels"
+    },
+    {
+      "surface": "Tiny Tune and Pattern Finder",
+      "changes": "Sticky transport bar keeps Play at the bottom of phone screens with a safe-area inset, static in print, 16px select"
+    }
+  ]
+}
