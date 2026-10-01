@@ -5,7 +5,7 @@
 <a class="skip" href="#notice">Skip to the notice</a>
 <header class="masthead wrap"><a class="wordmark" href="../index.html"><img src="../assets/seed.svg" alt="" width="31" height="31"> AI FOR GOOD</a><a class="back-link" href="../index.html">← Back to the workshop</a></header>
 <main class="wrap">
-  <section class="page-header"><p class="eyebrow">02 / Words & judgment</p><h1>Make it clearer.</h1><p>You want to help at a pantry. What’s your next step? Read the notice, then check what the AI made of it.</p><span class="badge">Fictional example · prepared AI output · no live model call</span></section>
+  <section class="page-header"><p class="eyebrow">02 / Words & judgment</p><h1>Make it clearer.</h1><p>You want to help at a food pantry. Read the notice, then check whether the prepared rewrite kept every fact.</p><span class="badge">Fictional notice · rewrite prepared in advance</span></section>
   <div class="clarity-layout">
     <section class="source-panel" aria-labelledby="source-title">
       <div class="panel-label"><span class="eyebrow">The starting point</span></div>
@@ -14,8 +14,8 @@
       <div class="source-caption" id="source-caption" aria-live="polite">Which time applies to you?</div>
     </section>
     <section class="result-panel" aria-labelledby="result-title">
-      <span class="eyebrow">The prepared draft</span><h2 id="result-title">Your next steps</h2>
-      <div id="before-reveal"><div class="empty-mark" aria-hidden="true">↳</div><p>A clearer version is ready to inspect.</p><p class="muted">The goal: keep every fact that matters, and leave the gaps visible.</p><button type="button" class="primary" id="reveal" aria-expanded="false" aria-controls="draft">Show prepared example ↗</button></div>
+      <span class="eyebrow">The prepared rewrite</span><h2 id="result-title">Your next steps</h2>
+      <div id="before-reveal"><div class="empty-mark" aria-hidden="true">↳</div><p>A rewrite of the notice is ready.</p><p class="muted">A good rewrite keeps every fact that matters and names what is missing.</p><button type="button" class="primary" id="reveal" aria-expanded="false" aria-controls="draft">Show the rewrite</button></div>
       <div id="draft" hidden>
         <p class="hint">Select an action to see the source behind it.</p>
         <div class="action-list" role="group" aria-label="Prepared actions with source links">
@@ -29,8 +29,8 @@
       </div>
     </section>
   </div>
-  <section class="fact-check" aria-labelledby="check-title"><div><p class="eyebrow">A quick audience check</p><h2 id="check-title">Do I have to bring a bag?</h2><p>Check the notice before you answer.</p></div><div class="check-options" role="group" aria-label="Is bringing a bag required?"><button type="button" data-answer="required">Yes, it’s required</button><button type="button" data-answer="optional">Only if I have one</button><p id="answer-feedback" aria-live="polite"></p></div></section>
+  <section class="fact-check" aria-labelledby="check-title"><div><p class="eyebrow">Audience check</p><h2 id="check-title">Do I have to bring a bag?</h2><p>Check the notice before you answer.</p></div><div class="check-options" role="group" aria-label="Is bringing a bag required?"><button type="button" data-answer="required">Yes, it’s required</button><button type="button" data-answer="optional">Only if I have one</button><p id="answer-feedback" aria-live="polite"></p></div></section>
   <div class="demo-tools"><button type="button" class="copy-button" id="reset">Reset the example ↺</button><a class="text-link" href="../prompts.html">Try the prompt yourself ↗</a></div>
-  <details class="made-with"><summary>How it was made</summary><p>Codex prepared the fictional notice and its clearer version using ChatGPT subscription access (runtime model: gpt-6-astra). The source highlights and audience check run locally in your browser.</p><p>The page makes no model calls. The original prompt asks for names, times, limits, optional items, and exceptions to survive the rewrite. You can inspect every action against its source.</p></details>
-</main><footer class="wrap footer"><span>Clearer words still need a human check.</span><a href="../index.html">Back to the workshop ↑</a></footer>
+  <details class="made-with"><summary>How it was made</summary><p>Codex prepared the notice and rewrite in advance with ChatGPT (model: gpt-6-astra). The page makes no model calls.</p><p>The prompt asked for names, times, limits, optional items and exceptions to survive. Select any action to compare it with its source.</p></details>
+</main><footer class="wrap footer"><span>AI for Good workshop</span><a href="../index.html">Back to the workshop ↑</a></footer>
 </body></html>

@@ -17,7 +17,7 @@ cards.forEach(card=>{card.setAttribute('aria-pressed','false');card.addEventList
 document.querySelectorAll('[data-answer]').forEach(button=>{button.setAttribute('aria-pressed','false');button.addEventListener('click',()=>{
  document.querySelectorAll('[data-answer]').forEach(x=>x.setAttribute('aria-pressed',String(x===button)));
  const correct=button.dataset.answer==='optional';
- document.querySelector('#answer-feedback').textContent=correct?'Exactly. “If you have one” makes the bag optional.':'Look again: the notice says “if you have one.” The bag is optional.';
+ document.querySelector('#answer-feedback').textContent=correct?'Right. “If you have one” makes the bag optional.':'Look again: the notice says “if you have one.” The bag is optional.';
  highlight(['bag']);caption.textContent='Source: Bring a reusable bag if you have one.';
 });});
 document.querySelector('#reset').addEventListener('click',()=>{

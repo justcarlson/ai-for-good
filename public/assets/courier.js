@@ -1,6 +1,6 @@
 (() => {
  const canvas=document.querySelector('#scene'),ctx=canvas.getContext('2d');
- if(!ctx || typeof drawScene!=='function'){document.querySelector('#stage-caption').textContent='The scene could not load. Open the workshop prompts to explore the idea.';return;}
+ if(!ctx || typeof drawScene!=='function'){document.querySelector('#stage-caption').textContent='The scene could not load in this browser. The prompts page has the original idea.';return;}
  const motionQuery=matchMedia('(prefers-reduced-motion:reduce)');
  let motion=!motionQuery.matches,playing=false,t=0,invited=0,last=0,currentStage=-1;
  const pace=document.querySelector('#pace'),palette=document.querySelector('#palette');
