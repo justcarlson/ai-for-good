@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4eee1"><title>Make it clearer · AI for Good</title><link rel="icon" href="../assets/seed.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/workshop.css"><link rel="stylesheet" href="../assets/clarity.css"><script src="../assets/clarity.js" defer></script></head>
+<body>
+<a class="skip" href="#notice">Skip to the notice</a>
+<header class="masthead wrap"><a class="wordmark" href="../index.html"><img src="../assets/seed.svg" alt="" width="31" height="31"> AI FOR GOOD</a><a class="back-link" href="../index.html">← Back to the workshop</a></header>
+<main class="wrap">
+  <section class="page-header"><p class="eyebrow">02 / Words & judgment</p><h1>Make it clearer.</h1><p>You want to help at a pantry. What’s your next step? Read the notice, then check what the AI made of it.</p><span class="badge">Fictional example · prepared AI output · no live model call</span></section>
+  <div class="clarity-layout">
+    <section class="source-panel" aria-labelledby="source-title">
+      <div class="panel-label"><span class="eyebrow">The starting point</span></div>
+      <h2 id="source-title">A note from the pantry</h2>
+      <p class="notice" id="notice"><span data-source="intro">Pine Street Pantry packers:</span> <span data-source="time">Saturday’s session is now 10:30–12:00, not 10:00, at Willow Hall.</span> <span data-source="capacity">We can take up to eight volunteers.</span> <span data-source="signup">Tell Jo by Thursday at 17:00 if you can come; don’t just turn up.</span> <span data-source="bag">Bring a reusable bag if you have one.</span> <span data-source="age">Under-16s must come with an adult.</span> <span data-source="driver">Delivery drivers should still arrive at 10:00 at the pantry.</span> <span data-source="instructions">We’ll explain packing when you get here.</span></p>
+      <div class="source-caption" id="source-caption" aria-live="polite">Which time applies to you?</div>
+    </section>
+    <section class="result-panel" aria-labelledby="result-title">
+      <span class="eyebrow">The prepared draft</span><h2 id="result-title">Your next steps</h2>
+      <div id="before-reveal"><div class="empty-mark" aria-hidden="true">↳</div><p>A clearer version is ready to inspect.</p><p class="muted">The goal: keep every fact that matters, and leave the gaps visible.</p><button type="button" class="primary" id="reveal" aria-expanded="false" aria-controls="draft">Show prepared example ↗</button></div>
+      <div id="draft" hidden>
+        <p class="hint">Select an action to see the source behind it.</p>
+        <div class="action-list" role="group" aria-label="Prepared actions with source links">
+          <button type="button" class="action-card" data-matches="signup,capacity"><span class="action-no">1</span><span><strong>Tell Jo before you go.</strong>Reply by Thursday at 17:00. There’s space for up to eight volunteers. Don’t just turn up.</span><span class="source-indicator" aria-hidden="true">↖</span></button>
+          <button type="button" class="action-card" data-matches="intro,time"><span class="action-no">2</span><span><strong>Packers: Saturday, 10:30–12:00.</strong>Meet at Willow Hall. The start has changed from 10:00 to 10:30.</span><span class="source-indicator" aria-hidden="true">↖</span></button>
+          <button type="button" class="action-card" data-matches="bag,age"><span class="action-no">3</span><span><strong>Bring a bag if you have one.</strong>Under 16? Come with an adult.</span><span class="source-indicator" aria-hidden="true">↖</span></button>
+          <button type="button" class="action-card compact" data-matches="instructions"><span><strong>New to packing?</strong>You’ll get instructions when you arrive.</span><span class="source-indicator" aria-hidden="true">↖</span></button>
+          <button type="button" class="action-card exception" data-matches="driver"><span><strong>Delivery drivers: still 10:00.</strong>Go to the pantry as before.</span><span class="source-indicator" aria-hidden="true">↖</span></button>
+        </div>
+        <div class="missing"><strong>Still missing</strong><p>Calendar dates, street addresses, and a way to contact Jo. Ask the organiser; don’t guess.</p></div>
+      </div>
+    </section>
+  </div>
+  <section class="fact-check" aria-labelledby="check-title"><div><p class="eyebrow">A quick audience check</p><h2 id="check-title">Do I have to bring a bag?</h2><p>Check the notice before you answer.</p></div><div class="check-options" role="group" aria-label="Is bringing a bag required?"><button type="button" data-answer="required">Yes, it’s required</button><button type="button" data-answer="optional">Only if I have one</button><p id="answer-feedback" aria-live="polite"></p></div></section>
+  <div class="demo-tools"><button type="button" class="copy-button" id="reset">Reset the example ↺</button><a class="text-link" href="../prompts.html">Try the prompt yourself ↗</a></div>
+  <details class="made-with"><summary>How it was made</summary><p>Codex prepared the fictional notice and its clearer version using ChatGPT subscription access (runtime model: gpt-6-astra). The source highlights and audience check run locally in your browser.</p><p>The page makes no model calls. The original prompt asks for names, times, limits, optional items, and exceptions to survive the rewrite. You can inspect every action against its source.</p></details>
+</main><footer class="wrap footer"><span>Clearer words still need a human check.</span><a href="../index.html">Back to the workshop ↑</a></footer>
+</body></html>

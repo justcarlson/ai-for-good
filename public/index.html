@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A playful AI for Good workshop. Make a garden grow, turn a tangled notice into clear actions, and try the prompts yourself.">
+  <meta name="theme-color" content="#f4eee1">
+  <title>AI for Good · Small things, made useful</title>
+  <link rel="icon" href="assets/seed.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/workshop.css">
+  <script src="assets/workshop.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to demos</a>
+  <header class="masthead wrap">
+    <a class="wordmark" href="index.html" aria-label="AI for Good home"><img src="assets/seed.svg" alt="" width="31" height="31"> AI FOR GOOD<span class="edition">A small workshop</span></a>
+    <nav aria-label="Main navigation"><a href="#demos">The demos</a><a href="https://github.com/justcarlson/ai-for-good" target="_blank" rel="noopener noreferrer">Source ↗</a></nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> Ideas you can play with</p>
+        <h1 id="title">Make a<br>little <span class="good">good<svg viewBox="0 0 280 28" aria-hidden="true"><path d="M4 18 Q100 1 272 11 M12 24 Q130 9 259 19"/></svg></span>.</h1>
+        <p class="intro">A seed, a tangled notice, and a few useful questions. Explore what you can make with AI.</p>
+        <div class="actions"><button class="primary" id="start-workshop" type="button">Start the workshop <span aria-hidden="true">↗</span></button><a class="text-link" href="#demos">Go straight to the demos ↓</a></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <span class="art-note">a small idea,<br>a place to grow.</span>
+        <svg class="garden" viewBox="0 0 460 470" fill="none">
+          <path d="M49 375Q199 386 419 353" stroke="#b9b4a6" stroke-width="1.5"/>
+          <path d="M81 399Q201 412 389 385" stroke="#b9b4a6" stroke-width="1.5"/>
+          <ellipse cx="240" cy="366" rx="105" ry="19" fill="#e6dfcf"/>
+          <path d="M248 354Q203 250 246 150" stroke="#354c37" stroke-width="9" stroke-linecap="round"/>
+          <path d="M223 277Q134 279 133 209Q205 203 228 267" fill="#5e7a4a"/>
+          <path d="M235 246Q255 174 329 196Q303 263 235 258" fill="#98ab6b"/>
+          <path d="M149 222L222 268M242 251L309 209" stroke="#f4eee1" stroke-width="2.5"/>
+          <g transform="translate(250 133)">
+            <ellipse cy="-42" rx="23" ry="47" fill="#df643c" transform="rotate(-6)"/>
+            <ellipse cy="-42" rx="23" ry="47" fill="#e88952" transform="rotate(54)"/>
+            <ellipse cy="-42" rx="23" ry="47" fill="#df643c" transform="rotate(114)"/>
+            <ellipse cy="-42" rx="23" ry="47" fill="#e88952" transform="rotate(174)"/>
+            <ellipse cy="-42" rx="23" ry="47" fill="#df643c" transform="rotate(234)"/>
+            <ellipse cy="-42" rx="23" ry="47" fill="#e88952" transform="rotate(294)"/>
+            <circle r="29" fill="#edc572"/><circle cx="-9" cy="-1" r="3" fill="#252c26"/><circle cx="9" cy="-1" r="3" fill="#252c26"/><path d="M-7 10Q0 16 7 10" stroke="#252c26" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+          <path d="M126 362Q122 306 153 294Q188 288 188 339L184 366Z" fill="#e6b657" stroke="#252c26" stroke-width="2.5"/>
+          <circle cx="150" cy="324" r="3" fill="#252c26"/><circle cx="164" cy="322" r="3" fill="#252c26"/><path d="M152 336Q160 341 166 334M135 365L128 378M174 365L181 376M184 344L210 329" stroke="#252c26" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M309 360L313 327M313 341Q299 328 293 333Q297 345 313 345M313 332Q331 316 334 328Q327 339 313 338" stroke="#5e7a4a" stroke-width="4" stroke-linecap="round"/>
+          <path d="M71 139L78 123M68 127L84 135M364 87L368 73M359 78L374 82M378 263L392 267M387 258L383 273" stroke="#b36a40" stroke-width="2" stroke-linecap="round"/>
+          <path d="M78 237Q65 187 101 177M90 173L103 176L100 190" stroke="#8a847a" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="art-index">Fig. 01 / Start small.</span>
+      </div>
+    </section>
+
+    <section class="demo-section wrap" id="demos" aria-labelledby="demos-title">
+      <div class="section-heading"><h2 id="demos-title">A couple of experiments.</h2><span class="eyebrow">Open. Play. Make it yours.</span></div>
+      <a class="demo-row" href="demos/seed-courier.html">
+        <span class="demo-number">01</span>
+        <div class="demo-info"><span class="eyebrow">Creative code · 45 seconds</span><h3>Seed Courier</h3><p>A grey street, one little seed, and a growing cast of helpers. You decide how the story moves.</p><span class="model-tag">Motion code by Claude Opus 5.5</span></div>
+        <span class="demo-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="demo-row" href="demos/make-it-clearer.html">
+        <span class="demo-number">02</span>
+        <div class="demo-info"><span class="eyebrow">Words & judgment · 60 seconds</span><h3>Make it clearer</h3><p>Find your next step in a tangled volunteer notice. Check the AI draft against the original.</p><span class="model-tag">Prepared with Codex · fictional example</span></div>
+        <span class="demo-arrow" aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <section class="try-section wrap" aria-labelledby="try-title">
+      <span class="eyebrow">Now it’s your turn</span>
+      <div class="try-grid"><h2 id="try-title">What’s one small<br>thing you could help?</h2><div><p>Choose a fictional notice, a tiny story, or a task that needs explaining. Give the model a clear starting point. Change one detail and compare.</p><a class="text-link" href="prompts.html">Open the workshop prompts ↗</a></div></div>
+    </section>
+  </main>
+  <footer class="wrap footer"><span>Made for trying things.</span><div><a href="downloads/ai-for-good.zip" download>Download an offline copy ↓</a><a href="https://github.com/justcarlson/ai-for-good" target="_blank" rel="noopener noreferrer">View source ↗</a></div></footer>
+
+  <dialog id="presentation" aria-labelledby="slide-title">
+    <div class="deck-top"><span class="wordmark">AI FOR GOOD</span><button type="button" class="quiet-button" id="close-deck">Close <span aria-hidden="true">×</span></button></div>
+    <div class="slide-body"><p class="eyebrow" id="slide-kicker"></p><h2 id="slide-title"></h2><p id="slide-description"></p><a class="primary" id="slide-link" href="demos/seed-courier.html">Open Seed Courier ↗</a></div>
+    <div class="deck-bottom"><span id="slide-count" aria-live="polite">1 / 4</span><div><button class="quiet-button" type="button" id="fullscreen">Full screen</button><button class="round-button" type="button" id="previous-slide" aria-label="Previous slide">←</button><button class="round-button" type="button" id="next-slide" aria-label="Next slide">→</button></div></div>
+  </dialog>
+  <noscript><p class="wrap">The presentation controls need JavaScript. You can still open both demos and the prompts above.</p></noscript>
+</body>
+</html>
