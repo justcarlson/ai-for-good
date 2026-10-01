@@ -1,0 +1,229 @@
+{
+  "direction": "Release 'Nonprofit companion'. AI for Good becomes an optional, offline companion to the official AI Lab agenda at rtcf-workshop.emergent.host; it does not replace or compete with it. A new nonprofit.html opens with what a nonprofit representative can make next week. It has a local R-T-C-F builder with three fictional presets, the nine official recipes linked to the official Build page, short coach notes taken from the mentor guidance, and a handoff into the participant's own workspace. The home page and opening slides lead to this page first. The 13 activities and the routes remain available as optional practice. The builder only assembles text the participant types. It never generates output, and nothing leaves the browser. All six demos, the 13 guides, reset and the accessibility behaviour stay unchanged. Tool prices and plans are not restated anywhere; the page links to the official Stack page instead. The page makes no claim that the nonprofit endorses this site.",
+  "page": {
+    "title": "AI for Good · Nonprofit companion to AI Lab",
+    "eyebrow": "Optional companion to the AI Lab session",
+    "heading": "Make one thing your team can use next week.",
+    "intro": "The AI Lab session on the official site sets the agenda. Use this page beside it to draft an R-T-C-F prompt, pick a recipe, and practise on made-up examples. You type and decide. Coaches ask questions.",
+    "sections": [
+      {
+        "id": "next-week",
+        "heading": "What you could make next week",
+        "body": "Pick one person and one moment when they would use the result. Finish this sentence out loud: we are building ___, for ___, and done looks like ___. If you cannot show it working in 15 seconds, make it smaller."
+      },
+      {
+        "id": "data-rule",
+        "heading": "Made-up data only",
+        "body": "Do not put real names, contact details, student or family records, donor records, payroll data or attendance sheets into any AI tool. Keep the real field names and use invented values in them."
+      },
+      {
+        "id": "review",
+        "heading": "Before anything leaves the table",
+        "body": "The output reviewer checks three things: is it accurate, does it contain anything private, and does it sound like your organization. If the answer to any of them is wrong, they can say 'do not send that'."
+      },
+      {
+        "id": "official",
+        "heading": "Where the session lives",
+        "body": "Prompt School, The Build, Mentor Resources and The Sustainable Stack are on the official AI Lab site. Follow your host. Terms for tools change, so check the Stack page for current terms instead of relying on this page."
+      }
+    ],
+    "builder": {
+      "heading": "R-T-C-F prompt builder",
+      "intro": "Fill in the four boxes for a task you actually do. The prompt assembles below as you type. This page does not send or save your text.",
+      "fields": [
+        {
+          "id": "role",
+          "label": "Role",
+          "hint": "Who you want the AI to be. Example: a grants officer who reviews youth program proposals."
+        },
+        {
+          "id": "task",
+          "label": "Task",
+          "hint": "The one thing you want it to do, with a limit. Example: draft the outcomes section in under 200 words."
+        },
+        {
+          "id": "context",
+          "label": "Context",
+          "hint": "What it cannot guess about your organization, audience and tone. Most weak results come from a thin Context box."
+        },
+        {
+          "id": "format",
+          "label": "Format",
+          "hint": "The shape of the answer. Example: three short paragraphs, plain words, ending with one measurable target."
+        }
+      ],
+      "preparedNote": "A preset is a starting prompt, not an AI answer. The organization and every fact in it are invented. Replace them with your own structure, keep the values made-up, then paste the prompt into your own workspace.",
+      "emptyHint": "Your four boxes will assemble here as you type.",
+      "copyLabel": "Copy prompt",
+      "resetLabel": "Clear all boxes",
+      "presets": [
+        {
+          "id": "four-audiences",
+          "label": "One message, four audiences",
+          "source": "Fictional source: Harbor Lane Youth Club. 'Our summer program is full. 60 places were taken in 9 days. A waitlist opens 9 June. Families on the waitlist hear back by 20 June. The program runs 7 July to 15 August, weekdays 9:00 to 15:00.'",
+          "role": "You are a communications lead at a small community youth organization. You write for boards, funders and families.",
+          "task": "Produce four labelled versions of the source message, for the Board, the Funder, Families, and Families in Spanish. Do not change any facts. Use only the source facts; name missing details rather than inventing them.",
+          "context": "Board cares about outcomes and risk. Funder cares about impact and spend. Families care about their child and what to do next. The Spanish version is for the same families, in a warm everyday register. Our tone is plain and friendly. Source message (invented): Harbor Lane Youth Club. 'Our summer program is full. 60 places were taken in 9 days. A waitlist opens 9 June. Families on the waitlist hear back by 20 June. The program runs 7 July to 15 August, weekdays 9:00 to 15:00.'",
+          "format": "Four blocks headed Board, Funder, Families, Spanish. Each block is 60 words or fewer. Every date and number matches the source exactly.",
+          "review": "Do all four versions keep the same dates and numbers? Has a fluent speaker checked the Spanish for tone, not just translation?"
+        },
+        {
+          "id": "month-end",
+          "label": "Month-end request that gets complete replies",
+          "source": "Fictional chase email: 'Hi all, please send your receipts and mileage for October asap, thanks!' Known requirements: receipts with date and amount, a mileage log with start and end points, the program code, due 31 October at 17:00, sent to the finance inbox.",
+          "role": "You are an operations coordinator who designs clear internal requests for busy program staff.",
+          "task": "Rewrite the chase email as a reusable month-end request template, plus a checklist staff can tick before they submit.",
+          "context": "Staff are part-time and often miss the program code. The deadline and the required items are listed in the source. Do not add requirements that are not in the source. Mark anything unclear as 'confirm with finance'. Source (invented): 'Hi all, please send your receipts and mileage for October asap, thanks!' Known requirements: receipts with date and amount, a mileage log with start and end points, the program code, due 31 October at 17:00, sent to the finance inbox.",
+          "format": "An email of no more than 120 words with [brackets] for the month and the date, then a checklist of no more than six items.",
+          "review": "Could a colleague send this next month without asking you anything? Did the AI invent a rule that your finance team does not have?"
+        },
+        {
+          "id": "funder-update",
+          "label": "Funder progress update",
+          "source": "Fictional figures: Northfield Reading Partners, spring term. Stated outcomes: 80 students attend weekly sessions, and 70 percent improve one reading level. Results: 74 students attended weekly, and 52 of the 74 improved one level. Story: a made-up student, 'R.', started reading to a younger sibling at home.",
+          "role": "You are a nonprofit program manager writing for a local education funder.",
+          "task": "Draft a progress update with each stated outcome followed by its matching number.",
+          "context": "Use only the figures in the source. Where a result falls short of its target, say so plainly and give no excuse the source does not support. The story is invented. Our tone is warm but evidence-led. Source (invented): Northfield Reading Partners, spring term. Stated outcomes: 80 students attend weekly sessions, and 70 percent improve one reading level. Results: 74 students attended weekly, and 52 of the 74 improved one level. Story: a made-up student, 'R.', started reading to a younger sibling at home. No next-term plan is provided. Mark that as a question for the team, not an invented commitment.",
+          "format": "A heading for each outcome. Two or three sentences under each, with the number first. Then a story of no more than 50 words. End with one line stating that the next-term plan is an open question for the team.",
+          "review": "Is every number traceable to the source, and is the shortfall stated honestly? Would your leadership be comfortable reading this? Check 52 divided by 74 by hand."
+        }
+      ]
+    },
+    "recipes": [
+      {
+        "title": "Grant and proposal drafting assistant",
+        "oneLine": "Outline a new proposal and draft its two hardest sections in your own voice.",
+        "practiceActivityId": "better-question"
+      },
+      {
+        "title": "Funder report and impact update assistant",
+        "oneLine": "Back every stated outcome with a number and, where you can, a story.",
+        "practiceActivityId": "claim-check"
+      },
+      {
+        "title": "Recurring document assistant",
+        "oneLine": "Turn a document you write again and again into something a colleague can run.",
+        "practiceActivityId": "make-it-clearer"
+      },
+      {
+        "title": "Multi-audience rewriter",
+        "oneLine": "One message in four versions, with the same facts framed for each reader.",
+        "practiceActivityId": "explain-it-two-ways"
+      },
+      {
+        "title": "Spreadsheet question assistant",
+        "oneLine": "Ask leadership's real questions of a made-up sheet, then check the answers by hand.",
+        "practiceActivityId": "pattern-finder"
+      },
+      {
+        "title": "Month-end documentation pack",
+        "oneLine": "Turn your chase email into a template and a checklist that get complete submissions.",
+        "practiceActivityId": null
+      },
+      {
+        "title": "Workflow automation in your own workspace",
+        "oneLine": "Automate one small thing, with one trigger and one action, in the workspace you already use.",
+        "practiceActivityId": null
+      },
+      {
+        "title": "Responsible AI use policy",
+        "oneLine": "A one-page first draft, a plain-language staff summary and a red-lines list.",
+        "practiceActivityId": "tool-or-not"
+      },
+      {
+        "title": "Organization knowledge base",
+        "oneLine": "Set up a Project that knows your organization, the way you would onboard a new hire. Use this as the smaller fallback.",
+        "practiceActivityId": null
+      }
+    ],
+    "coachNotes": [
+      "Coach, do not drive. The representative keeps the keyboard and makes every decision.",
+      "Ask which box is thinnest. It is usually Context. Do not fill it in for them.",
+      "Ask early whether the project touches real records. If it does, build the same thing with the same fields on made-up data.",
+      "If someone is hesitant about AI, treat it as a considered position and talk it through. Do not argue them out of it.",
+      "Push on the 'for whom'. 'The team' is not an answer. A named role and a moment of use is.",
+      "If the table is stuck between two recipes, choose the smaller one. If they cannot show a working piece in 15 seconds, switch to the knowledge base and call it banking a win."
+    ],
+    "handoffSteps": [
+      "Copy the prompt and paste it into your organization's own AI workspace or Project.",
+      "Run it there, then have the output reviewer check accuracy, privacy and voice.",
+      "Save the prompt and the reviewed output in your own Project so they stay with your team.",
+      "Within 48 hours, try the structure on one real task, following your organization's data rules. Save the prompt to your library."
+    ],
+    "sourceLinkLabel": "Open the official AI Lab session ↗"
+  },
+  "home": {
+    "eyebrow": "Companion to the AI Lab session · offline, no login",
+    "heading": "Build one useful thing for your nonprofit.",
+    "intro": "Follow the official AI Lab session, and use this site beside it to draft an R-T-C-F prompt on made-up examples. You can then take it into your own workspace. The practice activities are optional.",
+    "primaryLabel": "Open the nonprofit companion",
+    "secondaryLabel": "Start the opening slides",
+    "choices": [
+      {
+        "label": "Nonprofit team?",
+        "title": "Draft a prompt for next week",
+        "note": "Builder, three presets and the nine recipes",
+        "href": "nonprofit.html"
+      },
+      {
+        "label": "In the session?",
+        "title": "Go to the official AI Lab",
+        "note": "Prompt School, The Build, Mentor Resources and Stack",
+        "href": "https://rtcf-workshop.emergent.host/"
+      },
+      {
+        "label": "Optional practice",
+        "title": "Browse the 13 activities",
+        "note": "Fictional warm-ups and demos",
+        "href": "workshop.html"
+      }
+    ],
+    "practiceHeading": "Optional practice",
+    "practiceIntro": "Short warm-ups on fictional examples. Use them before or between session segments. They are not part of the official agenda."
+  },
+  "slides": [
+    {
+      "kicker": "01 / Next week",
+      "title": "What will one person on your team use next week?",
+      "description": "Name the person, the moment they would use it, and what done looks like in 15 seconds.",
+      "label": "Open the companion ↗",
+      "href": "nonprofit.html"
+    },
+    {
+      "kicker": "02 / R-T-C-F",
+      "title": "Role, Task, Context, Format.",
+      "description": "Write each box for a task you do. Most weak results come from a thin Context box.",
+      "label": "Try the builder ↗",
+      "href": "nonprofit.html#builder"
+    },
+    {
+      "kicker": "03 / Made-up data",
+      "title": "Real structure, invented values.",
+      "description": "No real names, contact details, donor, student, family, payroll or attendance records. Check accuracy, privacy and voice before anything is sent.",
+      "label": "See the presets ↗",
+      "href": "nonprofit.html#presets"
+    },
+    {
+      "kicker": "04 / The session",
+      "title": "Your host leads from here.",
+      "description": "Prompt School and The Build run on the official site. The practice activities stay available if you want them.",
+      "label": "Open the official AI Lab ↗",
+      "href": "https://rtcf-workshop.emergent.host/"
+    }
+  ],
+  "libraryIntro": "Optional practice: 13 activities on fictional examples. They are separate from the official AI Lab agenda and work offline.",
+  "routesIntro": "Optional plans for using the practice activities in a 15 to 180 minute slot. In an AI Lab session, follow the host's agenda first.",
+  "guideNote": "This guide uses fictional practice material. For the session itself, use the official AI Lab pages.",
+  "layout": "nonprofit.html uses the existing workshop.css and the same masthead, with a 'Nonprofit' nav item first. Order: (1) hero with the eyebrow, heading, intro and the official-site button; (2) a 'what you could make next week' card holding the sentence frame; (3) the builder (id builder). On wide screens, four labelled textareas sit on the left and a live preview sits on the right, with Copy and Clear buttons. Above it is a row of three preset buttons (id presets). Choosing a preset fills the boxes and shows its source and review question in a note beside the preview. Below about 720px the layout is one column. (4) The data-rule and review sections as two compact cards; (5) the nine recipes as a list. Each one links to https://rtcf-workshop.emergent.host/build, and recipes with a practiceActivityId add a 'Practice' link to activity.html?id=... The knowledge base is marked as the fallback. (6) Coach notes inside a details element; (7) handoff steps plus links to /prompt-school, /mentors and /stack. All behaviour is plain JS with no storage or network, aria-live on the preview, and labelled fields. Button press scale is 0.97 at 160ms ease-out, with no animation for keyboard actions, and motion is reduced under prefers-reduced-motion. On the home page, the hero choices change to the three above; the demo and guided sections move below an 'Optional practice' heading. The slides are replaced with the four above.",
+  "alignmentChecks": [
+    "Every official link points to rtcf-workshop.emergent.host. All nine recipes use /build because no separate recipe routes were observed.",
+    "No tool prices, discounts or plan claims appear. The page links to /stack and notes that terms change.",
+    "No wording implies the nonprofit endorses or runs this site. It is labelled an optional companion.",
+    "Each preset has a fictional source, all four R-T-C-F fields and a review question, and is labelled as a starting prompt, not output.",
+    "The builder uses no network or storage, and copy works from file://.",
+    "The data rule lists the same categories as the source.",
+    "The six demos, 13 guides, reset and accessibility features are unchanged, and the original demo facts and prepared outputs are untouched.",
+    "Copy is original and short, with no source paragraphs reproduced, no em dashes and no employer branding.",
+    "Participants type, coaches ask questions, hesitation is treated with respect, and prompts and outputs are saved in the participant's own workspace."
+  ]
+}

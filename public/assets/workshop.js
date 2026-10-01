@@ -1,11 +1,35 @@
 const deck = document.querySelector('#presentation');
 if (deck) {
   const slides = [
-    {kicker:'01 / A little imagination',title:'What could you make in twenty minutes?',description:'Start with a small idea that helps someone. First a short animated story, then a practical writing check.',label:'Explore the demos ↓',href:'#demos'},
-    {kicker:'02 / Creative code',title:'Give a small idea room to grow.',description:'A tiny courier has a seed to deliver. Add a helper, change the pace, and see how the story feels.',label:'Open Seed Courier ↗',href:'demos/seed-courier.html'},
-    {kicker:'03 / Words & judgment',title:'Can you find your next step?',description:'Read a fictional volunteer notice, then check the prepared rewrite. Did the times, exceptions and missing details survive?',label:'Open Make it clearer ↗',href:'demos/make-it-clearer.html'},
-    {kicker:'04 / Your turn',title:'Make one small thing useful.',description:'Pick a fictional task and write a clear request. Change one detail, then ask a partner to check the result.',label:'Choose an activity ↗',href:'workshop.html'}
-  ];
+  {
+    "kicker": "01 / Next week",
+    "title": "What will one person on your team use next week?",
+    "description": "Name the person, the moment they would use it, and what done looks like in 15 seconds.",
+    "label": "Open the companion ↗",
+    "href": "nonprofit.html"
+  },
+  {
+    "kicker": "02 / R-T-C-F",
+    "title": "Role, Task, Context, Format.",
+    "description": "Write each box for a task you do. Most weak results come from a thin Context box.",
+    "label": "Try the builder ↗",
+    "href": "nonprofit.html#builder"
+  },
+  {
+    "kicker": "03 / Made-up data",
+    "title": "Real structure, invented values.",
+    "description": "No real names, contact details, donor, student, family, payroll or attendance records. Check accuracy, privacy and voice before anything is sent.",
+    "label": "See the presets ↗",
+    "href": "nonprofit.html#presets"
+  },
+  {
+    "kicker": "04 / The session",
+    "title": "Your host leads from here.",
+    "description": "Prompt School and The Build run on the official site. The practice activities stay available if you want them.",
+    "label": "Open the official AI Lab ↗",
+    "href": "https://rtcf-workshop.emergent.host/"
+  }
+];
   let index = 0;
   const previous = document.querySelector('#previous-slide');
   const next = document.querySelector('#next-slide');
@@ -21,7 +45,7 @@ if (deck) {
   function closeDeck() {if(document.fullscreenElement) document.exitFullscreen().catch(()=>{});deck.close();}
   document.querySelector('#start-workshop').addEventListener('click',()=>{index=0;render();deck.showModal();});
   document.querySelector('#close-deck').addEventListener('click',closeDeck);
-  document.querySelector('#slide-link').addEventListener('click',()=>{if(index===0)closeDeck();});
+  document.querySelector('#slide-link').addEventListener('click',()=>{if(document.querySelector("#slide-link").getAttribute("href").startsWith("#"))closeDeck();});
   previous.addEventListener('click',()=>{index=Math.max(0,index-1);render();});
   next.addEventListener('click',()=>{index=Math.min(slides.length-1,index+1);render();});
   deck.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();next.click();}if(e.key==='ArrowLeft'){e.preventDefault();previous.click();}});

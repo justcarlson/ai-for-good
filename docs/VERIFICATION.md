@@ -3,7 +3,7 @@
 Checked on 1 October 2026 in Chromium. This records actual checks, not a claim
 that every browser or physical device was tested.
 
-- Build and syntax: all 14 browser scripts passed. All local HTML targets,
+- Build and syntax: all 16 browser scripts passed. All local HTML targets,
   offline ZIP references and CRCs passed. All four route totals were checked.
 - Menu and guides: 13 correct titles, source inputs, prompts and prepared examples;
   theme/format/time filtering; presenter mode; Show it / Try it / On paper;
@@ -61,3 +61,20 @@ Menu, guide and route axe audits found zero violations or incomplete checks.
 Opus reviewed four rendered views and the navigation source, then supplied minor
 copy, print-width and phone route-button corrections. Those corrections were
 applied. Browser print output was inspected; physical printing remains untested.
+
+## Nonprofit companion
+
+Forty-six checks passed: 20 layouts across 375, 390, 768 and 1440px; exact prepared
+field values; source and output labels; copy submission and its denied-permission
+fallback; safe text rendering; clear/reset and focus; all nine recipe links;
+official handoff links; four opening slides; existing presenter navigation;
+reduced motion; and editing/reset in the extracted offline copy.
+
+The clipboard accepted the exact assembled text. Clipboard read permission was
+unavailable in the test browser, so the check wrapped the native write operation
+and verified its successful argument. No clipboard read-back is claimed.
+
+The companion, home, menu and route pages had no axe violations. A named preview
+region was added after an incomplete ARIA check. Textareas grow to fit their
+contents. No screen reader or physical phone was used. Visual reviews are
+separate from the main session's interaction tests.

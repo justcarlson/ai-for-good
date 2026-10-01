@@ -25,7 +25,9 @@
     "content_mix": "Everyday work and community projects",
     "creative_lead": "Claude Opus 5.5 or Sonnet 5.5: all new ideas and first design pass; Codex integrates and reviews.",
     "site_polish_task_cap_usd": null,
-    "site_polish_authorization": "2026-10-01: Owner removed the task cap for the Opus whole-site copy/design pass. $5 UTC-month limit remains."
+    "site_polish_authorization": "2026-10-01: Owner removed the task cap for the Opus whole-site copy/design pass. $5 UTC-month limit remains.",
+    "nonprofit_reference": "https://rtcf-workshop.emergent.host/",
+    "nonprofit_scope": "Owner confirmed companion demos and prompts that follow the nonprofit agenda."
   },
   "coordination": {
     "task_owner": "main Codex session",
@@ -214,6 +216,15 @@
         "opus-site-polish"
       ],
       "acceptance": "Menu filters, presenter mode and route survive navigation and refresh; reset is clear; browser and offline checks pass."
+    },
+    {
+      "id": "nonprofit-alignment",
+      "title": "Align the companion with the nonprofit AI Lab agenda",
+      "owner": "Opus 5.5 creative lead; main implementation and UAT",
+      "depends_on": [
+        "presenter-flow"
+      ],
+      "acceptance": "Official AI Lab remains the main workshop; companion leads with nonprofit tasks, R-T-C-F prompts, fictional practice data, participant control, human review and clear handoff links."
     }
   ]
 }

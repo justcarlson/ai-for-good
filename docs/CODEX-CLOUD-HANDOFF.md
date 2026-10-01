@@ -1,5 +1,11 @@
 # Codex Cloud handoff
 
+Later local releases added presenter URL state and the nonprofit AI Lab companion
+after the Cloud snapshots below. Their exact scope and browser checks are in
+[NONPROFIT-ALIGNMENT.md](NONPROFIT-ALIGNMENT.md) and
+[VERIFICATION.md](VERIFICATION.md). They were not reviewed by the earlier Cloud
+worker. The current public repository contains the complete implementation.
+
 The public repository is [justcarlson/ai-for-good](https://github.com/justcarlson/ai-for-good).
 The website and demos are implemented; Cloudflare Pages serves the static files.
 

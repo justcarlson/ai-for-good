@@ -1,4 +1,5 @@
 /* Home page only */
+.hp-utility{grid-column:1/-1;display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-top:4px}.hp-utility .text-link{font-size:14px}.hp-practice-intro{max-width:65ch;color:var(--muted);margin-bottom:0}
 body.home-page .masthead{height:84px}
 .hp-hero{display:grid;grid-template-columns:1.5fr 1fr;gap:12px 40px;padding-block:36px 44px;align-items:center}
 .hp-kicker{display:flex;align-items:center;gap:10px;color:var(--muted);margin:0}

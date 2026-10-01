@@ -13,3 +13,4 @@ state.json
 .cloudflare/
 
 .wrangler/
+__pycache__/
